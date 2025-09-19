@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://na62wq72rrxi"]
+
+[ext_resource type="Script" uid="uid://b2eeao3wt85hc" path="res://DialogueSystem/dialog_script_line.gd" id="1_62uoh"]
+[ext_resource type="AudioStream" uid="uid://crfb3518vrrsr" path="res://DialogueSystem/VoiceLines/Default.wav" id="3_qaa1h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_62uoh"]
+font_size = 56
+
+[node name="DialogScriptLine" type="HBoxContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 23.175
+offset_top = -138.865
+offset_right = 1227.18
+offset_bottom = 161.135
+grow_vertical = 0
+scale = Vector2(0.42, 0.42)
+alignment = 1
+script = ExtResource("1_62uoh")
+
+[node name="CharacterPortrait" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="CharacterTextBackground" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="DialogBoxText" type="Label" parent="CharacterTextBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.897
+offset_left = -35.36905
+offset_top = -90.79765
+offset_right = 751.631
+offset_bottom = 37.102325
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+text = "Thinking: okay what joke should I tell?"
+label_settings = SubResource("LabelSettings_62uoh")
+vertical_alignment = 1
+
+[node name="LineRead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qaa1h")
+
+[connection signal="finished" from="LineRead" to="." method="_on_line_read_finished"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://b3p50xl2l0fjb"
+path="res://.godot/imported/StupidTeacher.clyde-d5276b6ff052dca20a30255b72ab860d.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/StupidTeacher.clyde"
+dest_files=["res://.godot/imported/StupidTeacher.clyde-d5276b6ff052dca20a30255b72ab860d.res"]
+
+[params]
+

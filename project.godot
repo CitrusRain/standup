@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[addons]
+
+metadata_manager/template_script_path="res://metadata_definitions.gd"
+
+[application]
+
+config/name="StandUp"
+run/main_scene="uid://dkem517wphvqs"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/clyde/plugin.cfg")
+
+[global_group]
+
+StageSpeechBox="StageDialouge node - should only be 1"
+JokeHandler="Handles advancement of text in jokes"
+UI="User Interface"

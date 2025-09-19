@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ba5ia44h4xxdb"]
+
+[node name="DialogueChain" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0

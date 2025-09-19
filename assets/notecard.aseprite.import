@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dy5k6sfi3mjuk"
+path="res://.godot/imported/notecard.aseprite-b9733ec3a6d792b972b9954278fa90e9.res"
+
+[deps]
+
+source_file="res://assets/notecard.aseprite"
+dest_files=["res://.godot/imported/notecard.aseprite-b9733ec3a6d792b972b9954278fa90e9.res"]
+
+[params]
+

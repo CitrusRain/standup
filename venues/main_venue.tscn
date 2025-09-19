@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkem517wphvqs"]
+
+[ext_resource type="PackedScene" uid="uid://pr8vmxighkic" path="res://cards/hand.tscn" id="1_6p21l"]
+[ext_resource type="PackedScene" uid="uid://ubr0bmahaprr" path="res://UserInterface/ui_user_interface.tscn" id="2_f8bm8"]
+[ext_resource type="PackedScene" uid="uid://dwcqttbq5yqvg" path="res://Handlers/joke_handler.tscn" id="3_jwfid"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Hand" parent="." instance=ExtResource("1_6p21l")]
+
+[node name="UI_UserInterface" parent="." instance=ExtResource("2_f8bm8")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_right = 0.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Joke Handler" parent="." instance=ExtResource("3_jwfid")]

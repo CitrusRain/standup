@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://pr8vmxighkic"]
+
+[ext_resource type="PackedScene" uid="uid://mpjemtif3l6w" path="res://cards/card.tscn" id="1_wenko"]
+
+[node name="Hand" type="Node2D"]
+
+[node name="Card" parent="." instance=ExtResource("1_wenko")]
+position = Vector2(1046, 205)
+metadata/CardText = "Hello Clyde"
+metadata/ClydeFile = "HelloClyde"
+
+[node name="Card2" parent="." instance=ExtResource("1_wenko")]
+position = Vector2(1047, 297)
+metadata/CardText = "Halfway There"
+metadata/ClydeFile = "HalfwayThere"
+
+[node name="Card3" parent="." instance=ExtResource("1_wenko")]
+position = Vector2(1048, 378)
+metadata/CardText = "Stupid Teacher"
+metadata/ClydeFile = "StupidTeacher"

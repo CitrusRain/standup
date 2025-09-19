@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://ubr0bmahaprr"]
+
+[ext_resource type="Script" uid="uid://bfsgcudxrdng0" path="res://UserInterface/ui_user_interface.gd" id="1_rrjhh"]
+
+[node name="UI_UserInterface" type="Control" groups=["UI"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_rrjhh")
+
+[node name="AudienceDialogue" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StageDialogue" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="StageDialogue"]
+layout_mode = 2
+text = "0123456789"
+
+[node name="Holder" type="Control" parent="StageDialogue" groups=["StageSpeechBox"]]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NextLine" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1041.0
+offset_top = 587.0
+offset_right = 1123.0
+offset_bottom = 618.0
+text = "Next Line"
+
+[connection signal="pressed" from="NextLine" to="." method="_on_next_line_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwcqttbq5yqvg"]
+
+[ext_resource type="Script" uid="uid://ch3rdkclp8e6u" path="res://Handlers/joke_handler.gd" id="1_yph47"]
+[ext_resource type="PackedScene" uid="uid://na62wq72rrxi" path="res://DialogueSystem/dialog_script_line.tscn" id="2_wdskk"]
+
+[node name="Joke Handler" type="Node2D" groups=["JokeHandler"]]
+script = ExtResource("1_yph47")
+dialogue_holder = ExtResource("2_wdskk")
