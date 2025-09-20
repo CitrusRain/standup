@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkem517wphvqs"]
+[gd_scene load_steps=5 format=3 uid="uid://dkem517wphvqs"]
 
 [ext_resource type="PackedScene" uid="uid://pr8vmxighkic" path="res://cards/hand.tscn" id="1_6p21l"]
 [ext_resource type="PackedScene" uid="uid://ubr0bmahaprr" path="res://UserInterface/ui_user_interface.tscn" id="2_f8bm8"]
 [ext_resource type="PackedScene" uid="uid://dwcqttbq5yqvg" path="res://Handlers/joke_handler.tscn" id="3_jwfid"]
+[ext_resource type="Texture2D" uid="uid://cdv4niyybbqcf" path="res://assets/stage.png" id="4_0afnn"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,10 +13,26 @@
 anchors_preset = 2
 anchor_top = 1.0
 anchor_right = 0.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = 2.0
+offset_top = 6.0
+offset_right = 1922.0
+offset_bottom = 1081.0
 grow_horizontal = 1
 grow_vertical = 0
 mouse_filter = 2
 
 [node name="Joke Handler" parent="." instance=ExtResource("3_jwfid")]
+
+[node name="Scenery" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Polygon2D" parent="Scenery"]
+z_index = -1
+texture_repeat = 2
+position = Vector2(958, 855.55115)
+scale = Vector2(6.8368797, 2.3244884)
+texture = ExtResource("4_0afnn")
+texture_offset = Vector2(26.77, -97.93)
+texture_scale = Vector2(2.56, 1)
+polygon = PackedVector2Array(-66.53246, -97, -99.00519, -101, -118.04935, -87, -128.05974, -58, -141, -57, -141, 100, 141, 100, 141, 3.8410034, 141, -106, -3.7844086, -90, -46.267532, -65)
+uv = PackedVector2Array(87, 11, 59, 11, 59, 12.7, 41.5, 22, 39.1, 22, 29.1, 33, 27.8, 33, 22.8, 43, 0, 43, 0, 200, 282, 200, 282, 43, 117.2, 43, 111, 31.4, 111, 29.1, 100, 19.1, 100, 17.6, 87, 12.6)
+polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)]

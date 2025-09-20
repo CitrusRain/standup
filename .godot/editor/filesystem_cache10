@@ -1,6 +1,8 @@
 ac714b6e50c926b090b6ce709bef964a
-::res://::1758242825
+::res://::1758332756
+global_data.tscn::PackedScene::3898217345135849822::1758332756::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::7233704782768675441::1758147223::1758147228::1::::<><><>0<>0<>0502a5775f5736995fd8492951c18b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1758243172::0::1::::<><><>0<>0<><>::
 ::res://addons/::1758152200
 ::res://addons/AsepriteWizard/::1758149581
 plugin.cfg::TextFile/TextFile::-1::1758149581::0::1::::<><><>0<>0<><>::
@@ -206,35 +208,45 @@ TokenWalker.gd::GDScript/GDScript::5515231370753267884::1758148862::0::1::::<>Re
 ClydeDialogueResource.gd::GDScript/GDScript::1523052849158077678::1758148862::0::1::::ClydeDialogueFile<>Resource<><>0<>0<><>::
 ClydeDialogueResourceLoader.gd::GDScript/GDScript::8378499238284821068::1758148862::0::1::::ClydeDialogueResourceLoader<>ResourceFormatLoader<><>0<>1<><>::
 ClydeDialogueResourceSaver.gd::GDScript/GDScript::8613058335454386011::1758148862::0::1::::ClydeDialogueResourceSaver<>ResourceFormatSaver<><>0<>1<><>::
-::res://assets/::1758149756
+::res://assets/::1758323334
 notecard.aseprite::PackedDataContainer/PackedDataContainer::8906389114098298294::1758149388::1758149756::1::::<><><>0<>0<>e90260f23ba206e485af311c0948a157<>res://.godot/imported/notecard.aseprite-b9733ec3a6d792b972b9954278fa90e9.res::
 notecard.png::CompressedTexture2D/CompressedTexture2D::3590129685837670885::1758149402::1758149429::1::::<><><>0<>0<>f17b42621e349376cd3ae7e101239fa6<>res://.godot/imported/notecard.png-126dfb8deb68f4edf7ee55548bb03013.ctex::
-::res://cards/::1758239542
-card.gd::GDScript::1477513951095790806::1758239542::0::1::::<>Node2D<><>0<>0<><>::
-card.tscn::PackedScene::873786046080568016::1758238355::0::1::::<><><>0<>0<><>::uid://brfc58tyjso7n::::res://assets/notecard.png<>uid://vbyo6m2kjfo5::::res://cards/card.gd<>uid://na62wq72rrxi::::res://DialogueSystem/dialog_script_line.tscn
-hand.tscn::PackedScene::1089968905005289746::1758238597::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
+stage.aseprite::PackedDataContainer::587475643882272746::1758323317::1758323334::1::::<><><>0<>0<>cd40620a6da18f2403bc8ed9be10dbe7<>res://.godot/imported/stage.aseprite-32f3d847dd9d5168d716ec522ff81f76.res::
+stage.png::CompressedTexture2D::5028544297600497185::1758323330::1758323334::1::::<><><>0<>0<>7b640c3911f42302893d922e0605503d<>res://.godot/imported/stage.png-bbe92d288bd59e6cea56e632b5294215.ctex::
+::res://cards/::1758333069
+card.gd::GDScript::1477513951095790806::1758333069::0::1::::Card<>Control<><>0<>0<><>::
+card.tscn::PackedScene::873786046080568016::1758333069::0::1::::<><><>0<>0<><>::uid://brfc58tyjso7n::::res://assets/notecard.png<>uid://vbyo6m2kjfo5::::res://cards/card.gd
+hand.tscn::PackedScene::1089968905005289746::1758322027::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
 jokes.json::JSON::-1::1758153165::0::1::::<><><>0<>0<><>::
-::res://DialogueSystem/::1758242071
+::res://DialogueSystem/::1758324341
 dialogue_chain.tscn::PackedScene/PackedScene::2448839320591240683::1755819542::0::1::::<><><>0<>0<><>::
 dialog_script_line.gd::GDScript::4290020620515007712::1758159906::0::1::::<>HBoxContainer<><>0<>0<><>::
-dialog_script_line.tscn::PackedScene::914386592226890642::1758242071::0::1::::<><><>0<>0<><>::uid://b2eeao3wt85hc::::res://DialogueSystem/dialog_script_line.gd<>uid://crfb3518vrrsr::::res://DialogueSystem/VoiceLines/Default.wav
-::res://DialogueSystem/Jokes/::1758238560
-HalfwayThere.clyde::ClydeDialogueFile::5863844353741019799::1758238266::1758238266::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>ce2d113eac111d46ca0a3fd081b48678<>res://.godot/imported/HalfwayThere.clyde-33a8ab2d9d9ba4ba03a91320e70a03c9.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+dialog_script_line.tscn::PackedScene::914386592226890642::1758324341::0::1::::<><><>0<>0<><>::uid://b2eeao3wt85hc::::res://DialogueSystem/dialog_script_line.gd<>uid://crfb3518vrrsr::::res://DialogueSystem/VoiceLines/Default.wav
+::res://DialogueSystem/Jokes/::1758322889
+8Standing.clyde::ClydeDialogueFile::462481486868473548::1758321547::1758321547::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>e0323c60cc4575ca40d3ac6eacdfd774<>res://.godot/imported/8Standing.clyde-b841b4a93ea1cdccffecdee9d3eee8d7.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Bicycle cant stand up.clyde::ClydeDialogueFile::7477743425356001814::1758321997::1758321997::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>ac620037b1e8b6c908f4bfc95ccbdd1f<>res://.godot/imported/Bicycle cant stand up.clyde-edf2933a347d3d959db01651bcba9ef0.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+HalfwayThere.clyde::ClydeDialogueFile::5863844353741019799::1758321584::1758321585::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>ce2d113eac111d46ca0a3fd081b48678<>res://.godot/imported/HalfwayThere.clyde-33a8ab2d9d9ba4ba03a91320e70a03c9.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
 HelloClyde.clyde::ClydeDialogueFile::1268953754405323460::1758238233::1758238233::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>1be6881a7f2dc32ccfa648ac9124d2bf<>res://.godot/imported/HelloClyde.clyde-4b85c204d39499615e480f9a231b966c.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
-StupidTeacher.clyde::ClydeDialogueFile::4384541352771867487::1758238560::1758238560::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>2fb841a2a28d50e764e407dc9da3bae8<>res://.godot/imported/StupidTeacher.clyde-d5276b6ff052dca20a30255b72ab860d.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Make a hotdog stand up.clyde::ClydeDialogueFile::331651087373036867::1758322624::1758322624::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>5d6a9b5aafc609a1d4c247ae9a622d23<>res://.godot/imported/Make a hotdog stand up.clyde-d3556a153a65c2313f1445a1014002ea.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Standup act about mountain climbing.clyde::ClydeDialogueFile::5138174104004384033::1758322706::1758322707::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>145833d06d26dd428f7ae89af9260143<>res://.godot/imported/Standup act about mountain climbing.clyde-8bc66698bec0ce5160d8adc75b470bf5.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+StupidTeacher.clyde::ClydeDialogueFile::4384541352771867487::1758321546::1758321546::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>2fb841a2a28d50e764e407dc9da3bae8<>res://.godot/imported/StupidTeacher.clyde-d5276b6ff052dca20a30255b72ab860d.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Three reasons to stand up.clyde::ClydeDialogueFile::8547051770315015051::1758321493::1758321493::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>883bd25f29468befe3ef8d4fb48369cc<>res://.godot/imported/Three reasons to stand up.clyde-dd3282af6c5edb08e4e380ee9317d7f7.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Upstairs Neighbors.clyde::ClydeDialogueFile::1731624802318198408::1758322394::1758322394::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>9484379f962b064ff5b2fc72f95aebb5<>res://.godot/imported/Upstairs Neighbors.clyde-0d25d483f8182af842cdac95f6bbe66a.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
+Why are furries neon.clyde::ClydeDialogueFile::7556816706140806528::1758322889::1758322889::1::::<><>res://addons/clyde/editor/assets/clyde.svg<>0<>0<>11e1e24af063ad450f933324f9635a5b<>res://.godot/imported/Why are furries neon.clyde-0ffa76dbe8a187cad7403280c1ef45ff.res::uid://vx1ptlqx8rwg::::res://addons/clyde/resource/ClydeDialogueResource.gd
 ::res://DialogueSystem/VoiceLines/::1758147654
 Default.wav::AudioStreamWAV/AudioStreamWAV::5976485934618694705::1754345843::1758147654::1::::<><><>0<>0<>5892f1b2206434578cdcb900bb09c69d<>res://.godot/imported/Default.wav-f1ae67c45e78883487d2dfe3296ed029.sample::
 HowToShoot.wav::AudioStreamWAV/AudioStreamWAV::4706759938874840046::1754345843::1758147654::1::::<><><>0<>0<>61e5a342da59f087e0b8ef5f762c8c74<>res://.godot/imported/HowToShoot.wav-3f0ec92d193b429ee669448c03d1bbce.sample::
 HowToUseESDFtoMove.wav::AudioStreamWAV/AudioStreamWAV::7728941849376303299::1754345843::1758147654::1::::<><><>0<>0<>970b022bea74f466d1721f21b2bab787<>res://.godot/imported/HowToUseESDFtoMove.wav-955d0512a0469db26e2be5b59826c1a3.sample::
 WelcomeToPlanetDia.wav::AudioStreamWAV/AudioStreamWAV::617307585232435922::1754345843::1758147654::1::::<><><>0<>0<>715cb344f7a0e1ff0dd73cca28dab9b8<>res://.godot/imported/WelcomeToPlanetDia.wav-479ba8f4cc2dca227d2b9fea134c5683.sample::
-::res://Documents/::1758149457
-::res://Handlers/::1758242037
-joke_handler.gd::GDScript::5323003925069094810::1758242895::0::1::::<>Node2D<><>0<>0<><>::
-joke_handler.tscn::PackedScene::8708551768849068144::1758239602::0::1::::<><><>0<>0<><>::uid://ch3rdkclp8e6u::::res://Handlers/joke_handler.gd<>uid://na62wq72rrxi::::res://DialogueSystem/dialog_script_line.tscn
-::res://StandUp/::1758147322
-README.md::TextFile/TextFile::-1::1758147322::0::1::::<><><>0<>0<><>::
-::res://UserInterface/::1758240813
+::res://Documents/::1758332814
+::res://Handlers/::1758333069
+joke_handler.gd::GDScript::5323003925069094810::1758333069::0::1::::<>Node2D<><>0<>0<><>::
+joke_handler.tscn::PackedScene::8708551768849068144::1758243620::0::1::::<><><>0<>0<><>::uid://ch3rdkclp8e6u::::res://Handlers/joke_handler.gd<>uid://na62wq72rrxi::::res://DialogueSystem/dialog_script_line.tscn
+::res://UserInterface/::1758333319
+Catalog.tscn::PackedScene::8482494155979956993::1758332106::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
+prepscreen.gd::GDScript::4343868652955015485::1758333319::0::1::::<>Control<><>0<>0<><>::
+prepscreen.tscn::PackedScene::6893143584017016873::1758333319::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn<>uid://b25g48w0548nx::::res://UserInterface/prepscreen.gd
 ui_user_interface.gd::GDScript::2774892631170029281::1758242895::0::1::::<>Control<><>0<>0<><>::
-ui_user_interface.tscn::PackedScene::1406918155309735167::1758242895::0::1::::<><><>0<>0<><>::uid://bfsgcudxrdng0::::res://UserInterface/ui_user_interface.gd
-::res://venues/::1758239495
-main_venue.tscn::PackedScene::7870191592266979950::1758239495::0::1::::<><><>0<>0<><>::uid://pr8vmxighkic::::res://cards/hand.tscn<>uid://ubr0bmahaprr::::res://UserInterface/ui_user_interface.tscn<>uid://dwcqttbq5yqvg::::res://Handlers/joke_handler.tscn
+ui_user_interface.tscn::PackedScene::1406918155309735167::1758324341::0::1::::<><><>0<>0<><>::uid://bfsgcudxrdng0::::res://UserInterface/ui_user_interface.gd
+::res://venues/::1758324215
+main_venue.tscn::PackedScene::7870191592266979950::1758324215::0::1::::<><><>0<>0<><>::uid://pr8vmxighkic::::res://cards/hand.tscn<>uid://ubr0bmahaprr::::res://UserInterface/ui_user_interface.tscn<>uid://dwcqttbq5yqvg::::res://Handlers/joke_handler.tscn<>uid://cdv4niyybbqcf::::res://assets/stage.png

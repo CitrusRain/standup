@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://dt1ixufysb0ux"
+path="res://.godot/imported/Three reasons to stand up.clyde-dd3282af6c5edb08e4e380ee9317d7f7.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Three reasons to stand up.clyde"
+dest_files=["res://.godot/imported/Three reasons to stand up.clyde-dd3282af6c5edb08e4e380ee9317d7f7.res"]
+
+[params]
+

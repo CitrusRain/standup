@@ -7,14 +7,17 @@
 font_size = 56
 
 [node name="DialogScriptLine" type="HBoxContainer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 23.175
-offset_top = -138.865
-offset_right = 1227.18
-offset_bottom = 161.135
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -602.00256
+offset_top = -150.0
+offset_right = 602.00256
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.42, 0.42)
 alignment = 1
 script = ExtResource("1_62uoh")

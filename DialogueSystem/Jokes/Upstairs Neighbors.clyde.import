@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://yw2uwjg70lem"
+path="res://.godot/imported/Upstairs Neighbors.clyde-0d25d483f8182af842cdac95f6bbe66a.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Upstairs Neighbors.clyde"
+dest_files=["res://.godot/imported/Upstairs Neighbors.clyde-0d25d483f8182af842cdac95f6bbe66a.res"]
+
+[params]
+

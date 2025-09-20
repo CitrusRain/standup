@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://cfg78hgac8wir"
+path="res://.godot/imported/Standup act about mountain climbing.clyde-8bc66698bec0ce5160d8adc75b470bf5.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Standup act about mountain climbing.clyde"
+dest_files=["res://.godot/imported/Standup act about mountain climbing.clyde-8bc66698bec0ce5160d8adc75b470bf5.res"]
+
+[params]
+

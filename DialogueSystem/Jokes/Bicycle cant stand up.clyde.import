@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://desjlvak4et2e"
+path="res://.godot/imported/Bicycle cant stand up.clyde-edf2933a347d3d959db01651bcba9ef0.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Bicycle cant stand up.clyde"
+dest_files=["res://.godot/imported/Bicycle cant stand up.clyde-edf2933a347d3d959db01651bcba9ef0.res"]
+
+[params]
+

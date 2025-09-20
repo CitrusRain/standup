@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://gubac6aw7t4g"
+path="res://.godot/imported/8Standing.clyde-b841b4a93ea1cdccffecdee9d3eee8d7.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/8Standing.clyde"
+dest_files=["res://.godot/imported/8Standing.clyde-b841b4a93ea1cdccffecdee9d3eee8d7.res"]
+
+[params]
+

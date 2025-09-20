@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://eywilfxedrah"
+path="res://.godot/imported/Make a hotdog stand up.clyde-d3556a153a65c2313f1445a1014002ea.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Make a hotdog stand up.clyde"
+dest_files=["res://.godot/imported/Make a hotdog stand up.clyde-d3556a153a65c2313f1445a1014002ea.res"]
+
+[params]
+

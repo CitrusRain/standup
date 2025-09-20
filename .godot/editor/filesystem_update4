@@ -8,3 +8,8 @@ res://Handlers/joke_handler.gd
 res://venues/main_venue.tscn
 res://UserInterface/ui_user_interface.gd
 res://DialogueSystem/dialog_script_line.tscn
+res://UserInterface/inventory.tscn
+res://UserInterface/prepscreen.tscn
+res://UserInterface/Catalog.tscn
+res://global_data.tscn
+res://UserInterface/prepscreen.gd
