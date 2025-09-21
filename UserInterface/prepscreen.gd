@@ -8,6 +8,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if GlobalData.new_player:
+		$"TabContainer/Writer's Room/BeginnerPanel".visible = true
+		$"TabContainer/Writer's Room/PanelContainer".visible = false
 	reload_cards()
 
 func reload_cards() -> void:
@@ -45,5 +48,18 @@ func _on_starter_button_pressed() -> void:
 	GlobalData.cache_new_card(Catalog.get_node("StarterPack/Card04"))
 	reload_cards()
 	$"TabContainer/Writer's Room/BeginnerPanel".visible = false
+	tab_manage_routine.visible = true
+	$"TabContainer/Writer's Room/PanelContainer".visible = true
+	pass # Replace with function body.
+
+
+func _on_buy_1_joke_pressed() -> void:
+	var card_set = Catalog.get_child((randi()%(Catalog.get_child_count()-1))+1)
+	while card_set.visible == false:
+		print("set not availible")
+		card_set = Catalog.get_child((randi()%(Catalog.get_child_count()-1))+1)
+	GlobalData.cache_new_card(card_set.get_child(randi()%card_set.get_child_count()))
+	reload_cards()
+	
 	tab_manage_routine.visible = true
 	pass # Replace with function body.

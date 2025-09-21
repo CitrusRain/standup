@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5hdckj8g5hgr"]
+[gd_scene load_steps=6 format=3 uid="uid://c5hdckj8g5hgr"]
 
 [ext_resource type="PackedScene" uid="uid://mpjemtif3l6w" path="res://cards/card.tscn" id="1_aqaj4"]
 [ext_resource type="Script" uid="uid://b25g48w0548nx" path="res://UserInterface/prepscreen.gd" id="1_b8vvm"]
 [ext_resource type="Texture2D" uid="uid://dmea2egtfxghu" path="res://assets/oldjokes.png" id="3_53j0d"]
 [ext_resource type="PackedScene" uid="uid://bnj2j4qkjx7hg" path="res://UserInterface/card_frame.tscn" id="3_f5wmu"]
+[ext_resource type="Texture2D" uid="uid://brfc58tyjso7n" path="res://assets/notecard.png" id="5_rlflf"]
 
 [node name="PrepScreen" type="Control"]
 layout_mode = 3
@@ -23,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 2
 
 [node name="Select Venue" type="Panel" parent="TabContainer"]
 visible = false
@@ -48,6 +49,7 @@ grow_vertical = 2
 text = "Only Venue"
 
 [node name="Manage Routine" type="Panel" parent="TabContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Put together a routine for where you want to go"
@@ -76,14 +78,10 @@ columns = 10
 [node name="CardFrame" parent="TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer" instance=ExtResource("3_f5wmu")]
 layout_mode = 2
 
-[node name="Card1" parent="TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer/CardFrame" instance=ExtResource("1_aqaj4")]
+[node name="Card04" parent="TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer/CardFrame" instance=ExtResource("1_aqaj4")]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 45.0
-offset_right = 60.0
-offset_bottom = 45.0
-metadata/CardText = "Halfway There"
-metadata/ClydeFile = "HalfwayThere"
+filename = "OldJoke4"
+visible_text = "Oldest Joke"
 
 [node name="InfoPanel" type="Panel" parent="TabContainer/Manage Routine"]
 layout_mode = 1
@@ -158,13 +156,13 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Writer\'s Room" type="Panel" parent="TabContainer"]
-visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Buy cue cards and abilities"
 metadata/_tab_index = 2
 
 [node name="BeginnerPanel" type="Panel" parent="TabContainer/Writer\'s Room"]
+visible = false
 layout_mode = 0
 offset_left = 682.0
 offset_top = 187.0
@@ -197,5 +195,18 @@ icon = ExtResource("3_53j0d")
 icon_alignment = 1
 expand_icon = true
 
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Writer\'s Room"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Buy1Joke" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer"]
+layout_mode = 2
+text = "Get 1 Random Joke"
+icon = ExtResource("5_rlflf")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
 [connection signal="pressed" from="TabContainer/Select Venue/Button" to="." method="_on_venue_button_pressed"]
 [connection signal="pressed" from="TabContainer/Writer\'s Room/BeginnerPanel/Label/StarterButton" to="." method="_on_starter_button_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/Buy1Joke" to="." method="_on_buy_1_joke_pressed"]

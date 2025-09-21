@@ -1,6 +1,6 @@
 ac714b6e50c926b090b6ce709bef964a
-::res://::1758416043
-global_data.gd::GDScript::7843144381547400890::1758414970::0::1::::<>Control<><>0<>0<><>::
+::res://::1758418700
+global_data.gd::GDScript::7843144381547400890::1758418700::0::1::::<>Control<><>0<>0<><>::
 global_data.tscn::PackedScene::3898217345135849822::1758411206::0::1::::<><><>0<>0<><>::uid://dj0jpba8gcvgk::::res://global_data.gd
 icon.svg::CompressedTexture2D/CompressedTexture2D::7233704782768675441::1758147223::1758147228::1::::<><><>0<>0<>0502a5775f5736995fd8492951c18b7d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1758243172::0::1::::<><><>0<>0<><>::
@@ -219,10 +219,10 @@ oldjokes.aseprite::PackedDataContainer::1243918688059787204::1758410404::1758410
 oldjokes.png::CompressedTexture2D::8009834122420456066::1758410432::1758410434::1::::<><><>0<>0<>c80e42e16224cac8b41b501b74469376<>res://.godot/imported/oldjokes.png-7eaf54e1fbba7ade2359a50f80bd4212.ctex::
 stage.aseprite::PackedDataContainer::587475643882272746::1758323317::1758323334::1::::<><><>0<>0<>cd40620a6da18f2403bc8ed9be10dbe7<>res://.godot/imported/stage.aseprite-32f3d847dd9d5168d716ec522ff81f76.res::
 stage.png::CompressedTexture2D::5028544297600497185::1758323330::1758323334::1::::<><><>0<>0<>7b640c3911f42302893d922e0605503d<>res://.godot/imported/stage.png-bbe92d288bd59e6cea56e632b5294215.ctex::
-::res://cards/::1758417286
-card.gd::GDScript::1477513951095790806::1758417286::0::1::::Card<>Control<><>0<>0<><>::
-card.tscn::PackedScene::873786046080568016::1758416769::0::1::::<><><>0<>0<><>::uid://brfc58tyjso7n::::res://assets/notecard.png<>uid://vbyo6m2kjfo5::::res://cards/card.gd
-Catalog.tscn::PackedScene::8482494155979956993::1758415080::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
+::res://cards/::1758419512
+card.gd::GDScript::1477513951095790806::1758419512::0::1::::Card<>Control<><>0<>0<><>::
+card.tscn::PackedScene::873786046080568016::1758419488::0::1::::<><><>0<>0<><>::uid://brfc58tyjso7n::::res://assets/notecard.png<>uid://vbyo6m2kjfo5::::res://cards/card.gd
+Catalog.tscn::PackedScene::8482494155979956993::1758419512::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
 hand.tscn::PackedScene::1089968905005289746::1758322027::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn
 jokes.json::JSON::-1::1758153165::0::1::::<><><>0<>0<><>::
 ::res://DialogueSystem/::1758324341
@@ -254,10 +254,10 @@ WelcomeToPlanetDia.wav::AudioStreamWAV/AudioStreamWAV::617307585232435922::17543
 ::res://Handlers/::1758417032
 joke_handler.gd::GDScript::5323003925069094810::1758416449::0::1::::<>Node2D<><>0<>0<><>::
 joke_handler.tscn::PackedScene::8708551768849068144::1758417032::0::1::::<><><>0<>0<><>::uid://ch3rdkclp8e6u::::res://Handlers/joke_handler.gd<>uid://na62wq72rrxi::::res://DialogueSystem/dialog_script_line.tscn
-::res://UserInterface/::1758418131
+::res://UserInterface/::1758419680
 card_frame.tscn::PackedScene::3319112030085245948::1758411907::0::1::::<><><>0<>0<><>::
-prepscreen.gd::GDScript::4343868652955015485::1758418157::0::1::::<>Control<><>0<>0<><>::
-prepscreen.tscn::PackedScene::6893143584017016873::1758418131::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn<>uid://b25g48w0548nx::::res://UserInterface/prepscreen.gd<>uid://dmea2egtfxghu::::res://assets/oldjokes.png<>uid://bnj2j4qkjx7hg::::res://UserInterface/card_frame.tscn
+prepscreen.gd::GDScript::4343868652955015485::1758419703::0::1::::<>Control<><>0<>0<><>::
+prepscreen.tscn::PackedScene::6893143584017016873::1758419654::0::1::::<><><>0<>0<><>::uid://mpjemtif3l6w::::res://cards/card.tscn<>uid://b25g48w0548nx::::res://UserInterface/prepscreen.gd<>uid://dmea2egtfxghu::::res://assets/oldjokes.png<>uid://bnj2j4qkjx7hg::::res://UserInterface/card_frame.tscn<>uid://brfc58tyjso7n::::res://assets/notecard.png
 ui_user_interface.gd::GDScript::2774892631170029281::1758242895::0::1::::<>Control<><>0<>0<><>::
 ui_user_interface.tscn::PackedScene::1406918155309735167::1758324341::0::1::::<><><>0<>0<><>::uid://bfsgcudxrdng0::::res://UserInterface/ui_user_interface.gd
 ::res://venues/::1758324215

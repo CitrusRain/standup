@@ -10,10 +10,6 @@ class_name Card
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if filename == "":
-		filename = get_meta("ClydeFile")
-	if visible_text == "":
-		visible_text = get_meta("CardText")
 	pass # Replace with function body.
 
 func _on_paper_pressed() -> void:
@@ -38,7 +34,7 @@ func _on_paper_pressed() -> void:
 				readme.find_child("Punchline").text = idk.get("text")
 			else:
 				print( idk.get("speaker") )
-				joketext = str( joketext , str(idk.get("speaker"), ": " , idk.get("text")))
+				joketext = str( joketext, "\n" , str(idk.get("speaker"), ": " , idk.get("text")))
 			idk = joke_file.get_content()
 		readme.find_child("Joke").text = joketext
 		

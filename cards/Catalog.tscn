@@ -44,45 +44,51 @@ offset_bottom = 40.0
 
 [node name="Card1" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Halfway There"
-metadata/ClydeFile = "HalfwayThere"
+filename = "HalfwayThere"
+visible_text = "Halfway There"
 
 [node name="Card2" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Stupid Teacher"
-metadata/ClydeFile = "StupidTeacher"
+filename = "StupidTeacher"
+visible_text = "Stupid Teacher"
 
 [node name="Card3" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "8"
-metadata/ClydeFile = "8Standing"
+filename = "8Standing"
+visible_text = "8"
 
 [node name="Card4" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Three reasons to stand up"
-metadata/ClydeFile = "Three reasons to stand up"
+filename = "Three reasons to stand up"
+visible_text = "Three reasons to stand up"
 
 [node name="Card5" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
+filename = "Bicycle cant stand up"
+visible_text = "Bicycle can't stand up"
 
 [node name="Card6" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Upstairs Neighbors"
-metadata/ClydeFile = "Upstairs Neighbors"
+filename = "Upstairs Neighbors"
+visible_text = "Upstairs Neighbors"
 
 [node name="Card7" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Hotdog stand up"
-metadata/ClydeFile = "Make a hotdog stand up"
+filename = "Make a hotdog stand up"
+visible_text = "Hotdog stand up"
 
 [node name="Card8" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Standup act about mountain climbing"
-metadata/ClydeFile = "Standup act about mountain climbing"
+filename = "Standup act about mountain climbing"
+visible_text = "Standup act about mountain climbing"
 
 [node name="Card9" parent="Set1" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-metadata/CardText = "Neon furries"
-metadata/ClydeFile = "Why are furries neon"
+filename = "Why are furries neon"
+visible_text = "Neon furries"
+
+[node name="Set2" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
