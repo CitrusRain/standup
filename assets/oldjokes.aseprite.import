@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://rytfn4o8qjps"
+path="res://.godot/imported/oldjokes.aseprite-99de3240681be2ea88b339f2d6ebb6bf.res"
+
+[deps]
+
+source_file="res://assets/oldjokes.aseprite"
+dest_files=["res://.godot/imported/oldjokes.aseprite-99de3240681be2ea88b339f2d6ebb6bf.res"]
+
+[params]
+

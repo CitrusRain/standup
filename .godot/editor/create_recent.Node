@@ -1,14 +1,14 @@
+VBoxContainer
+Panel
+FoldableContainer      - Matches the "collapsible" keyword.
 Control
 Button
+Label
 VSplitContainer
 ScrollContainer
 HBoxContainer
-VBoxContainer
-Label
-Panel
 TabContainer
 TabBar
 FoldableContainer
 GridContainer
 TextureButton
-ItemList

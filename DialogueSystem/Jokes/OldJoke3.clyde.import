@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://bdh4mpokdipbh"
+path="res://.godot/imported/OldJoke3.clyde-3c43b74f16df8e2f2196561ba3cbb785.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/OldJoke3.clyde"
+dest_files=["res://.godot/imported/OldJoke3.clyde-3c43b74f16df8e2f2196561ba3cbb785.res"]
+
+[params]
+

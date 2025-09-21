@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds38o6816706p"]
+
+[ext_resource type="PackedScene" uid="uid://mpjemtif3l6w" path="res://cards/card.tscn" id="1_xgu8m"]
+
+[node name="Catalog" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="StarterPack" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Card00" parent="StarterPack" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "OldJoke0"
+visible_text = "How do you want your hair cut?"
+
+[node name="Card01" parent="StarterPack" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "OldJoke1"
+visible_text = "Chicken #1"
+
+[node name="Card02" parent="StarterPack" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "OldJoke2"
+visible_text = "Odysseus & Cyclops"
+
+[node name="Card03" parent="StarterPack" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "OldJoke3"
+visible_text = "Blind & Old"
+
+[node name="Card04" parent="StarterPack" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "OldJoke4"
+visible_text = "Oldest Joke"
+
+[node name="Set1" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Card1" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Halfway There"
+metadata/ClydeFile = "HalfwayThere"
+
+[node name="Card2" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Stupid Teacher"
+metadata/ClydeFile = "StupidTeacher"
+
+[node name="Card3" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "8"
+metadata/ClydeFile = "8Standing"
+
+[node name="Card4" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Three reasons to stand up"
+metadata/ClydeFile = "Three reasons to stand up"
+
+[node name="Card5" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Bicycle can't stand up"
+metadata/ClydeFile = "Bicycle cant stand up"
+
+[node name="Card6" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Upstairs Neighbors"
+metadata/ClydeFile = "Upstairs Neighbors"
+
+[node name="Card7" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Hotdog stand up"
+metadata/ClydeFile = "Make a hotdog stand up"
+
+[node name="Card8" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Standup act about mountain climbing"
+metadata/ClydeFile = "Standup act about mountain climbing"
+
+[node name="Card9" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+metadata/CardText = "Neon furries"
+metadata/ClydeFile = "Why are furries neon"

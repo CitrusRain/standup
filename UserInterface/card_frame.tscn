@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bnj2j4qkjx7hg"]
+
+[node name="CardFrame" type="Panel"]
+custom_minimum_size = Vector2(119, 86)

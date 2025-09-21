@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c5hdckj8g5hgr"]
+[gd_scene load_steps=5 format=3 uid="uid://c5hdckj8g5hgr"]
 
 [ext_resource type="PackedScene" uid="uid://mpjemtif3l6w" path="res://cards/card.tscn" id="1_aqaj4"]
 [ext_resource type="Script" uid="uid://b25g48w0548nx" path="res://UserInterface/prepscreen.gd" id="1_b8vvm"]
+[ext_resource type="Texture2D" uid="uid://dmea2egtfxghu" path="res://assets/oldjokes.png" id="3_53j0d"]
+[ext_resource type="PackedScene" uid="uid://bnj2j4qkjx7hg" path="res://UserInterface/card_frame.tscn" id="3_f5wmu"]
 
 [node name="PrepScreen" type="Control"]
 layout_mode = 3
@@ -11,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b8vvm")
+card_frame = ExtResource("3_f5wmu")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 1
@@ -20,9 +23,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="Select Venue" type="Panel" parent="TabContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Pick a place to go enertain at"
@@ -43,319 +47,45 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Only Venue"
 
-[node name="ManageRoutine" type="Panel" parent="TabContainer"]
-visible = false
+[node name="Manage Routine" type="Panel" parent="TabContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Put together a routine for where you want to go"
 metadata/_tab_index = 1
 
-[node name="SplitContainer" type="VSplitContainer" parent="TabContainer/ManageRoutine"]
+[node name="SplitContainer" type="VSplitContainer" parent="TabContainer/Manage Routine"]
 layout_mode = 0
 offset_right = 1239.0
 offset_bottom = 1040.0
+split_offset = 500
 
-[node name="Joke Inventory" type="ScrollContainer" parent="TabContainer/ManageRoutine/SplitContainer"]
+[node name="Joke Inventory" type="ScrollContainer" parent="TabContainer/Manage Routine/SplitContainer"]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory"]
-layout_mode = 2
-columns = 10
-
-[node name="CardFrame" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card1" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Halfway There"
-metadata/ClydeFile = "HalfwayThere"
-
-[node name="CardFrame2" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card2" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame2" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Stupid Teacher"
-metadata/ClydeFile = "StupidTeacher"
-
-[node name="CardFrame3" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card3" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame3" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "8"
-metadata/ClydeFile = "8Standing"
-
-[node name="CardFrame4" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card4" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame4" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Three reasons to stand up"
-metadata/ClydeFile = "Three reasons to stand up"
-
-[node name="CardFrame5" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame5" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame6" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame6" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame7" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame7" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame8" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame8" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame9" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame9" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame10" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame10" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame11" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory/GridContainer/CardFrame11" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="Joke Inventory2" type="ScrollContainer" parent="TabContainer/ManageRoutine/SplitContainer"]
-layout_mode = 2
-
-[node name="GridContainer" type="GridContainer" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2"]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Manage Routine/SplitContainer/Joke Inventory"]
 layout_mode = 2
 columns = 10
 
-[node name="CardFrame" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
+[node name="Equipped" type="ScrollContainer" parent="TabContainer/Manage Routine/SplitContainer"]
 layout_mode = 2
 
-[node name="Card1" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame" instance=ExtResource("1_aqaj4")]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Manage Routine/SplitContainer/Equipped"]
+layout_mode = 2
+columns = 10
+
+[node name="CardFrame" parent="TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer" instance=ExtResource("3_f5wmu")]
+layout_mode = 2
+
+[node name="Card1" parent="TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer/CardFrame" instance=ExtResource("1_aqaj4")]
 layout_mode = 0
 offset_left = 60.0
-offset_top = 43.0
+offset_top = 45.0
 offset_right = 60.0
-offset_bottom = 43.0
+offset_bottom = 45.0
 metadata/CardText = "Halfway There"
 metadata/ClydeFile = "HalfwayThere"
 
-[node name="CardFrame2" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card2" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame2" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Stupid Teacher"
-metadata/ClydeFile = "StupidTeacher"
-
-[node name="CardFrame3" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card3" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame3" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "8"
-metadata/ClydeFile = "8Standing"
-
-[node name="CardFrame4" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card4" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame4" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Three reasons to stand up"
-metadata/ClydeFile = "Three reasons to stand up"
-
-[node name="CardFrame5" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame5" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame6" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame6" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame7" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame7" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame8" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame8" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame9" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame9" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame10" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame10" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="CardFrame11" type="Panel" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer"]
-custom_minimum_size = Vector2(119, 86)
-layout_mode = 2
-
-[node name="Card5" parent="TabContainer/ManageRoutine/SplitContainer/Joke Inventory2/GridContainer/CardFrame11" instance=ExtResource("1_aqaj4")]
-layout_mode = 0
-offset_left = 60.0
-offset_top = 43.0
-offset_right = 60.0
-offset_bottom = 43.0
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
-
-[node name="InfoPanel" type="Panel" parent="TabContainer/ManageRoutine"]
+[node name="InfoPanel" type="Panel" parent="TabContainer/Manage Routine"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -368,7 +98,7 @@ offset_bottom = 522.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="JokeInfo" type="Panel" parent="TabContainer/ManageRoutine/InfoPanel"]
+[node name="JokeInfo" type="Panel" parent="TabContainer/Manage Routine/InfoPanel" groups=["JokeInfoBox"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -376,7 +106,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -384,30 +114,41 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="JokeNumber" type="Label" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JokeNumber" type="Label" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Joke Number"
 
-[node name="Joke" type="Label" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer"]
+[node name="Joke" type="Label" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Joke"
+autowrap_mode = 3
 
-[node name="Punchline" type="Label" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer"]
+[node name="PunchlineHider" type="FoldableContainer" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+folded = true
+title = "Punchline"
+
+[node name="Punchline" type="Label" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/VBoxContainer/PunchlineHider"]
+visible = false
 layout_mode = 2
 text = "Punchline"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer"]
 layout_mode = 2
 
-[node name="BonusAttributes" type="Label" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer/HBoxContainer"]
+[node name="BonusAttributes" type="Label" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Bonus Attributes"
 
-[node name="OffenseAttributes" type="Label" parent="TabContainer/ManageRoutine/InfoPanel/JokeInfo/VBoxContainer/HBoxContainer"]
+[node name="OffenseAttributes" type="Label" parent="TabContainer/Manage Routine/InfoPanel/JokeInfo/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Offense Attributes"
 
-[node name="SkillInfo" type="Panel" parent="TabContainer/ManageRoutine/InfoPanel"]
+[node name="SkillInfo" type="Panel" parent="TabContainer/Manage Routine/InfoPanel"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -416,11 +157,45 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Shop" type="Panel" parent="TabContainer"]
+[node name="Writer\'s Room" type="Panel" parent="TabContainer"]
 visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Buy cue cards and abilities"
 metadata/_tab_index = 2
 
+[node name="BeginnerPanel" type="Panel" parent="TabContainer/Writer\'s Room"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 187.0
+offset_right = 1194.0
+offset_bottom = 802.0
+
+[node name="Label" type="Label" parent="TabContainer/Writer\'s Room/BeginnerPanel"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 27.0
+offset_right = 449.0
+offset_bottom = 266.0
+text = "	Welcome to the Writer's Room!
+I see it's your first time....
+The writer's room is where you can pay your way to Hollywood standup
+
+	However, the writers don't work for free. You'll have to steal some jokes to get started.
+
+	OH you have 2¢? You should have said something. That's just enough for a Starter Pack"
+autowrap_mode = 3
+
+[node name="StarterButton" type="Button" parent="TabContainer/Writer\'s Room/BeginnerPanel/Label"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_top = 281.0
+offset_right = 411.0
+offset_bottom = 569.0
+icon = ExtResource("3_53j0d")
+icon_alignment = 1
+expand_icon = true
+
 [connection signal="pressed" from="TabContainer/Select Venue/Button" to="." method="_on_venue_button_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/BeginnerPanel/Label/StarterButton" to="." method="_on_starter_button_pressed"]

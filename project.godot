@@ -15,13 +15,18 @@ metadata_manager/template_script_path="res://metadata_definitions.gd"
 [application]
 
 config/name="StandUp"
-run/main_scene="uid://dkem517wphvqs"
+run/main_scene="uid://c5hdckj8g5hgr"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dypqax7w4ma6b"
 
 [autoload]
 
 GlobalData="*res://global_data.tscn"
+Catalog="*res://cards/Catalog.tscn"
+
+[dialogue]
+
+source_folder="res://DialogueSystem/Jokes"
 
 [display]
 
@@ -38,3 +43,4 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 StageSpeechBox="StageDialouge node - should only be 1"
 JokeHandler="Handles advancement of text in jokes"
 UI="User Interface"
+JokeInfoBox=""
