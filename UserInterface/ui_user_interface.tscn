@@ -37,6 +37,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="NextLine" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1619.0
 offset_top = 799.0

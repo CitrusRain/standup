@@ -7,6 +7,8 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_nwofj")
+filename = null
+visible_text = null
 
 [node name="Paper" type="Button" parent="."]
 layout_mode = 0

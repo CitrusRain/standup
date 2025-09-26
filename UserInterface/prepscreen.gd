@@ -21,23 +21,26 @@ func reload_cards() -> void:
 		j.reparent(frame)
 		j.position.x = 60
 		j.position.y = 45
+		j.visible = true
 		joke_inventory.add_child(frame)
+		#GlobalData.cache_new_card(j) # Keeping this 
 	jokes_arr =  GlobalData.get_equipped()
 	for j in jokes_arr:
+		var local_copy = GlobalData.copy_card(j)
 		var frame = card_frame.instantiate()
-		j.reparent(frame)
+		local_copy.reparent(frame)
 		joke_inventory.add_child(frame)
 
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
-
-
 func _on_venue_button_pressed() -> void:
+	send_data_to_global()
 	get_tree().change_scene_to_file("res://venues/main_venue.tscn")
 	pass # Replace with function body.
+
+func send_data_to_global() -> void:
+	for j in joke_inventory.get_children():
+		GlobalData.cache_new_card(j.get_child(0))
+	for ej in equipped.get_children():
+		GlobalData.cache_new_card(ej.get_child(0),true)
 
 
 func _on_starter_button_pressed() -> void:

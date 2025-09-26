@@ -8,15 +8,9 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_next_line_pressed() -> void:
 	batman.show_next_line()
 	pass # Replace with function body.
 
-func next_visible(visible: bool = true) -> void:
-	next_line.visible = visible
+func next_visible(my_visible: bool = true) -> void:
+	next_line.visible = my_visible

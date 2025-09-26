@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
 
 [node name="Select Venue" type="Panel" parent="TabContainer"]
 visible = false
@@ -49,7 +49,6 @@ grow_vertical = 2
 text = "Only Venue"
 
 [node name="Manage Routine" type="Panel" parent="TabContainer"]
-visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Put together a routine for where you want to go"
@@ -156,6 +155,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Writer\'s Room" type="Panel" parent="TabContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Buy cue cards and abilities"

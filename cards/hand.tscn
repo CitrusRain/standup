@@ -1,30 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://pr8vmxighkic"]
-
-[ext_resource type="PackedScene" uid="uid://mpjemtif3l6w" path="res://cards/card.tscn" id="1_wenko"]
+[gd_scene format=3 uid="uid://pr8vmxighkic"]
 
 [node name="Hand" type="Node2D"]
-
-[node name="Card1" parent="." instance=ExtResource("1_wenko")]
-position = Vector2(1047, 297)
-metadata/CardText = "Halfway There"
-metadata/ClydeFile = "HalfwayThere"
-
-[node name="Card2" parent="." instance=ExtResource("1_wenko")]
-position = Vector2(1048, 378)
-metadata/CardText = "Stupid Teacher"
-metadata/ClydeFile = "StupidTeacher"
-
-[node name="Card3" parent="." instance=ExtResource("1_wenko")]
-position = Vector2(1050, 456)
-metadata/CardText = "8"
-metadata/ClydeFile = "8Standing"
-
-[node name="Card4" parent="." instance=ExtResource("1_wenko")]
-position = Vector2(1046, 205)
-metadata/CardText = "Three reasons to stand up"
-metadata/ClydeFile = "Three reasons to stand up"
-
-[node name="Card5" parent="." instance=ExtResource("1_wenko")]
-position = Vector2(1046, 205)
-metadata/CardText = "Bicycle can't stand up"
-metadata/ClydeFile = "Bicycle cant stand up"
