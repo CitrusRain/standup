@@ -1,10 +1,17 @@
 extends Control
+@onready var tab_container: TabContainer = $TabContainer
 
 @onready var tab_manage_routine: Panel = $"TabContainer/Manage Routine"
-@onready var joke_inventory: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Joke Inventory/GridContainer"
-@onready var equipped: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Equipped/GridContainer"
+@onready var joke_inventory: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Joke Inventory/VBoxContainer/GridContainer"
+@onready var equipped: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Equipped/VBoxContainer/GridContainer"
 
 @export var card_frame : PackedScene
+
+enum  tab_names { 
+					LEVEL , ## Venue select Tab
+					EQUIP ,   ## Manage Routine Tab
+					SHOP    ## Writer's room Tab
+					}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -50,8 +57,10 @@ func _on_starter_button_pressed() -> void:
 	GlobalData.cache_new_card(Catalog.get_node("StarterPack/Card03"))
 	GlobalData.cache_new_card(Catalog.get_node("StarterPack/Card04"))
 	reload_cards()
-	$"TabContainer/Writer's Room/BeginnerPanel".visible = false
 	tab_manage_routine.visible = true
+	for i in joke_inventory.get_children():
+		i.reparent(equipped)
+	$"TabContainer/Writer's Room/BeginnerPanel".visible = false
 	$"TabContainer/Writer's Room/PanelContainer".visible = true
 	pass # Replace with function body.
 
@@ -66,3 +75,22 @@ func _on_buy_1_joke_pressed() -> void:
 	
 	tab_manage_routine.visible = true
 	pass # Replace with function body.
+
+
+func _on_tab_container_tab_selected(tab: int) -> void: ##If we have any code needing checked when moving tabs, such as if a popup should become visible, do here.
+	if tab == tab_names.LEVEL:
+		if equipped:
+			$"TabContainer/Select Venue/MinEquipAlert".visible = (equipped.get_child_count() < 5)
+		else:
+			$"TabContainer/Select Venue/MinEquipAlert".visible = true
+	elif tab == tab_names.EQUIP:
+		pass
+	elif tab == tab_names.SHOP:
+		pass
+
+
+func _on_manage_button_pressed() -> void:
+	tab_container.current_tab = tab_names.EQUIP
+
+func _on_shop_button_pressed() -> void:
+	tab_container.current_tab = tab_names.SHOP

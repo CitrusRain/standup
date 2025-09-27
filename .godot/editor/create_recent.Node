@@ -1,15 +1,15 @@
+Timer
+Node2D
+CPUParticles2D
+PathFollow2D
+Sprite2D
+HBoxContainer
 PanelContainer
+Container
+Panel
+VBoxContainer
+Label
 Control
 Button
-VBoxContainer
-Panel
 FoldableContainer      - Matches the "collapsible" keyword.
-Label
 VSplitContainer
-ScrollContainer
-HBoxContainer
-TabContainer
-TabBar
-FoldableContainer
-GridContainer
-TextureButton

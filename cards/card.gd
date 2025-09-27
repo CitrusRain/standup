@@ -21,11 +21,12 @@ func _on_paper_pressed() -> void:
 		batman.show_next_line()
 	elif get_parent().get_parent().get_name() == "GridContainer":
 		if GlobalData.selected_card_in_menu == self: ## If already selected, move card
-			var inv =   $"../../../../Joke Inventory/GridContainer"
-			var equip = $"../../../../Equipped/GridContainer"
-			if get_parent().get_parent().get_parent().get_name() == "Joke Inventory":
+			var inv =   $"../../../../../Joke Inventory/VBoxContainer/GridContainer"
+			var equip = $"../../../../../Equipped/VBoxContainer/GridContainer"
+			print(inv, "<inv | get great grandparent>" , get_parent().get_parent().get_parent().get_parent().get_name())
+			if general_functions.get_great_grandparent(self).get_parent().get_name() == "Joke Inventory":
 				get_parent().reparent(equip)
-			elif get_parent().get_parent().get_parent().get_name() == "Equipped":
+			elif general_functions.get_great_grandparent(self).get_parent().get_name() == "Equipped":
 				get_parent().reparent(inv)
 			
 		else: #load card info

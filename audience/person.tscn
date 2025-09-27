@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://yw5i3fvlybdi"]
+
+[ext_resource type="Script" uid="uid://vbigc03gco6j" path="res://audience/person.gd" id="1_ce63i"]
+[ext_resource type="Texture2D" uid="uid://dmmnbrl5nuspy" path="res://assets/person.png" id="1_xqsv5"]
+[ext_resource type="PackedScene" uid="uid://n605nrwmvq1o" path="res://audience/laughter_particle.tscn" id="3_4fu3l"]
+
+[node name="Person" type="Node2D"]
+script = ExtResource("1_ce63i")
+
+[node name="BodyOverTable" type="Sprite2D" parent="."]
+texture = ExtResource("1_xqsv5")
+
+[node name="LaughterParticle" parent="." instance=ExtResource("3_4fu3l")]
+position = Vector2(0, -38)
+emitting = false
+
+[node name="LaughTimeout" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="LaughTimeout" to="." method="_on_laugh_timeout_timeout"]

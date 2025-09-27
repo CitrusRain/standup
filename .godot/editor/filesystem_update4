@@ -10,3 +10,8 @@ res://venues/main_venue.tscn
 res://venues/live_stage.gd
 res://cards/hand.tscn
 res://cards/card.tscn
+res://audience/person.tscn
+res://audience/person.gd
+res://audience/laughter_particle.tscn
+res://Handlers/joke_handler.tscn
+res://Handlers/joke_handler.gd

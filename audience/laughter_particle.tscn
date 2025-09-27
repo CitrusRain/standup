@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://n605nrwmvq1o"]
+
+[ext_resource type="Texture2D" uid="uid://c47a2l6rhwftl" path="res://assets/haha.png" id="1_c5k4c"]
+
+[node name="LaughterParticle" type="CPUParticles2D"]
+texture_filter = 3
+amount = 3
+texture = ExtResource("1_c5k4c")
+lifetime = 0.5
+gravity = Vector2(0, -705)

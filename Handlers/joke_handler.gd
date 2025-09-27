@@ -6,8 +6,14 @@ extends Node2D
 @onready var stage_dialogue_box: Control = get_tree().get_first_node_in_group("StageSpeechBox")
 @onready var ui: Control = get_tree().get_first_node_in_group("UI")
 
+signal punchline
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	add_user_signal("punchline", [
+		{ "name": "basepoints", "type": TYPE_INT },
+		{ "name": "jokedata", "type": TYPE_ARRAY }
+	])
 	pass # Replace with function body.
 
 
@@ -25,6 +31,8 @@ func show_next_line() -> void:
 		print(idk.get("speaker"))
 		if idk.get("speaker") == null:
 			speechbox.set_text(idk.get("text"))
+		elif idk.get("speaker") == "Punchline":
+			emit_signal("punchline")
 		else:
 			speechbox.set_text(str(idk.get("speaker"), ": " , idk.get("text")))
 	else:
