@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://b6kmceg8w6nnb"
+path="res://.godot/imported/KittyWolf1.clyde-76af7a02448a922f1672f6d3df36dcf1.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/KittyWolf1.clyde"
+dest_files=["res://.godot/imported/KittyWolf1.clyde-76af7a02448a922f1672f6d3df36dcf1.res"]
+
+[params]
+

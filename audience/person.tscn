@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://yw5i3fvlybdi"]
+[gd_scene load_steps=5 format=3 uid="uid://yw5i3fvlybdi"]
 
 [ext_resource type="Script" uid="uid://vbigc03gco6j" path="res://audience/person.gd" id="1_ce63i"]
 [ext_resource type="Texture2D" uid="uid://dmmnbrl5nuspy" path="res://assets/person.png" id="1_xqsv5"]
 [ext_resource type="PackedScene" uid="uid://n605nrwmvq1o" path="res://audience/laughter_particle.tscn" id="3_4fu3l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fu3l"]
+radius = 31.06445
 
 [node name="Person" type="Node2D"]
 script = ExtResource("1_ce63i")
@@ -18,4 +21,52 @@ emitting = false
 wait_time = 2.0
 one_shot = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4fu3l")
+
+[node name="PersonalityInfo" type="Panel" parent="."]
+visible = false
+z_index = 100
+offset_left = 47.0
+offset_top = -102.0
+offset_right = 236.0
+offset_bottom = 111.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PersonalityInfo"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+text = "Age/Gender:"
+
+[node name="lbl_asl" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+text = "Profession:"
+
+[node name="lbl_profession" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+text = "Finds Positive:"
+
+[node name="lbl_positive" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+text = "Finds Negative:"
+
+[node name="lbl_negative" type="Label" parent="PersonalityInfo/VBoxContainer"]
+layout_mode = 2
+
 [connection signal="timeout" from="LaughTimeout" to="." method="_on_laugh_timeout_timeout"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -88,7 +88,11 @@ filename = "Why are furries neon"
 visible_text = "Neon furries"
 
 [node name="Set2" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Card1" parent="Set2" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "KittyWolf1"
+visible_text = "Clever Cow"

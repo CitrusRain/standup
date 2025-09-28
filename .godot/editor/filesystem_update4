@@ -15,3 +15,7 @@ res://audience/person.gd
 res://audience/laughter_particle.tscn
 res://Handlers/joke_handler.tscn
 res://Handlers/joke_handler.gd
+res://venues/chair.tscn
+res://venues/chair.gd
+res://general_functions.gd
+res://cards/Catalog.tscn

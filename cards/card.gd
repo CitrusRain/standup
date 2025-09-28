@@ -18,7 +18,7 @@ func _on_paper_pressed() -> void:
 			batman = get_tree().get_first_node_in_group("JokeHandler")
 		batman.joke_file.load_dialogue(str("res://DialogueSystem/Jokes/" , str(filename,".clyde")))
 		batman.joke_node = self
-		batman.show_next_line()
+		batman.show_next_line(self)
 	elif get_parent().get_parent().get_name() == "GridContainer":
 		if GlobalData.selected_card_in_menu == self: ## If already selected, move card
 			var inv =   $"../../../../../Joke Inventory/VBoxContainer/GridContainer"
@@ -52,3 +52,5 @@ func _on_paper_pressed() -> void:
 			readme.find_child("Joke").text = joketext
 		
 		
+func delete_self() -> void:
+	queue_free()

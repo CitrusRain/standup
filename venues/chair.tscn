@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5x518falyl4d"]
+
+[ext_resource type="Texture2D" uid="uid://cdpw6chaplcui" path="res://assets/chair.png" id="1_7bi8b"]
+[ext_resource type="Script" uid="uid://coop8if3erxqx" path="res://venues/chair.gd" id="2_gmy22"]
+
+[node name="Chair" type="Sprite2D"]
+texture = ExtResource("1_7bi8b")
+script = ExtResource("2_gmy22")

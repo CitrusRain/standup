@@ -21,23 +21,26 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func show_next_line() -> void:
+func show_next_line(reading_card: Card = joke_node) -> void:
+	joke_node = reading_card
 	var speechbox = dialogue_holder.instantiate()
 	var idk = joke_file.get_content()
-	# { "type": "line", "tags": [], "id": <null>, "speaker": "You", "text": "I can stand up, now all I need is comedy." }
-	print(idk)
-	ui.next_visible(idk.get("type") != "end")
+	ui.next_visible(idk.get("type") != "end") #sets visibility of next line button
 	if idk.get("type") != "end":
 		print(idk.get("speaker"))
 		if idk.get("speaker") == null:
 			speechbox.set_text(idk.get("text"))
 		elif idk.get("speaker") == "Punchline":
 			emit_signal("punchline")
+			speechbox.set_text(idk.get("text"))
+		elif idk.get("speaker") == "Self-Destruct":
+			joke_node.delete_self()
+			ui.next_visible(false)
 		else:
 			speechbox.set_text(str(idk.get("speaker"), ": " , idk.get("text")))
 	else:
 		joke_node.uses += 1 ##Finished telling the joke one more time than before
+		print("eof")
 	for lines in stage_dialogue_box.get_children():
 		lines.queue_free()
 	stage_dialogue_box.add_child(speechbox)
-	pass

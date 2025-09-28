@@ -5,12 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://ubr0bmahaprr" path="res://UserInterface/ui_user_interface.tscn" id="2_f8bm8"]
 [ext_resource type="PackedScene" uid="uid://dwcqttbq5yqvg" path="res://Handlers/joke_handler.tscn" id="3_jwfid"]
 [ext_resource type="Texture2D" uid="uid://cdv4niyybbqcf" path="res://assets/stage.png" id="4_0afnn"]
-[ext_resource type="Texture2D" uid="uid://cdpw6chaplcui" path="res://assets/chair.png" id="6_ugl41"]
 [ext_resource type="Texture2D" uid="uid://cx3aavej6oc6x" path="res://assets/table.png" id="7_0m51d"]
 [ext_resource type="PackedScene" uid="uid://yw5i3fvlybdi" path="res://audience/person.tscn" id="8_dtq0q"]
+[ext_resource type="PackedScene" uid="uid://b5x518falyl4d" path="res://venues/chair.tscn" id="9_0m51d"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_f0s5o")
+base_person = Array[PackedScene]([ExtResource("8_dtq0q")])
 
 [node name="Hand" parent="." instance=ExtResource("1_6p21l")]
 position = Vector2(1200, 500)
@@ -43,47 +44,90 @@ polygon = PackedVector2Array(-66.53246, -97, -99.00519, -101, -118.04935, -87, -
 uv = PackedVector2Array(87, 11, 59, 11, 59, 12.7, 41.5, 22, 39.1, 22, 29.1, 33, 27.8, 33, 22.8, 43, 0, 43, 0, 200, 282, 200, 282, 43, 117.2, 43, 111, 31.4, 111, 29.1, 100, 19.1, 100, 17.6, 87, 12.6)
 polygons = [PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)]
 
-[node name="Group" type="Node2D" parent="Scenery"]
+[node name="Chair" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1075, 415)
 
-[node name="Chair" type="Sprite2D" parent="Scenery/Group"]
-position = Vector2(685, 415)
-texture = ExtResource("6_ugl41")
-
-[node name="FlippedChair" type="Sprite2D" parent="Scenery/Group"]
-position = Vector2(764, 418)
-rotation = -3.1415925
-scale = Vector2(1, -1)
-texture = ExtResource("6_ugl41")
-
-[node name="Table" type="Sprite2D" parent="Scenery/Group"]
-position = Vector2(722, 421)
-texture = ExtResource("7_0m51d")
-
-[node name="Person" parent="Scenery/Group" instance=ExtResource("8_dtq0q")]
-position = Vector2(695, 382)
-
-[node name="Group2" type="Node2D" parent="Scenery"]
-position = Vector2(390, 0)
-
-[node name="Chair" type="Sprite2D" parent="Scenery/Group2"]
-position = Vector2(685, 415)
-texture = ExtResource("6_ugl41")
-
-[node name="FlippedChair" type="Sprite2D" parent="Scenery/Group2"]
-position = Vector2(764, 418)
-rotation = -3.1415925
-scale = Vector2(1, -1)
-texture = ExtResource("6_ugl41")
-
-[node name="Table" type="Sprite2D" parent="Scenery/Group2"]
-position = Vector2(722, 421)
-texture = ExtResource("7_0m51d")
-
-[node name="Person" parent="Scenery/Group2" instance=ExtResource("8_dtq0q")]
-modulate = Color(1, 1, 0.050980393, 1)
-position = Vector2(695, 382)
-
-[node name="Person2" parent="Scenery/Group2" instance=ExtResource("8_dtq0q")]
-modulate = Color(0.13725491, 1, 0.76862746, 1)
-position = Vector2(763.75, 382)
+[node name="Chair2" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1155.22, 415)
 scale = Vector2(-1, 1)
+
+[node name="Chair5" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(279, 331)
+
+[node name="Chair6" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(359.21997, 331)
+scale = Vector2(-1, 1)
+
+[node name="Chair7" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1448, 292)
+
+[node name="Chair8" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1528.22, 292)
+scale = Vector2(-1, 1)
+
+[node name="Chair9" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1453, 521)
+
+[node name="Chair10" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1533.22, 521)
+scale = Vector2(-1, 1)
+
+[node name="Chair11" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(280, 523)
+
+[node name="Chair12" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(360.21997, 523)
+scale = Vector2(-1, 1)
+
+[node name="Chair13" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(682, 215)
+
+[node name="Chair14" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(762.22, 215)
+scale = Vector2(-1, 1)
+
+[node name="Chair15" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1075, 213)
+
+[node name="Chair16" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(1155.22, 213)
+scale = Vector2(-1, 1)
+
+[node name="Chair3" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(688.415, 415)
+
+[node name="Chair4" parent="Scenery" instance=ExtResource("9_0m51d")]
+position = Vector2(770.65, 415)
+scale = Vector2(-1, 1)
+
+[node name="Table" type="Sprite2D" parent="Scenery"]
+position = Vector2(722, 421)
+texture = ExtResource("7_0m51d")
+
+[node name="Table2" type="Sprite2D" parent="Scenery"]
+position = Vector2(1112, 421)
+texture = ExtResource("7_0m51d")
+
+[node name="Table3" type="Sprite2D" parent="Scenery"]
+position = Vector2(1493, 531)
+texture = ExtResource("7_0m51d")
+
+[node name="Table4" type="Sprite2D" parent="Scenery"]
+position = Vector2(1488, 299)
+texture = ExtResource("7_0m51d")
+
+[node name="Table5" type="Sprite2D" parent="Scenery"]
+position = Vector2(1114, 219)
+texture = ExtResource("7_0m51d")
+
+[node name="Table6" type="Sprite2D" parent="Scenery"]
+position = Vector2(719, 224)
+texture = ExtResource("7_0m51d")
+
+[node name="Table7" type="Sprite2D" parent="Scenery"]
+position = Vector2(317, 339)
+texture = ExtResource("7_0m51d")
+
+[node name="Table8" type="Sprite2D" parent="Scenery"]
+position = Vector2(312, 534)
+texture = ExtResource("7_0m51d")

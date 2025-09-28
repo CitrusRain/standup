@@ -1,3 +1,9 @@
+VBoxContainer
+Label
+Panel
+CollisionShape2D
+StaticBody2D
+Area2D
 Timer
 Node2D
 CPUParticles2D
@@ -6,10 +12,3 @@ Sprite2D
 HBoxContainer
 PanelContainer
 Container
-Panel
-VBoxContainer
-Label
-Control
-Button
-FoldableContainer      - Matches the "collapsible" keyword.
-VSplitContainer
