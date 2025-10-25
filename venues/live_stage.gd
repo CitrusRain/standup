@@ -27,16 +27,16 @@ extends Node2D
 ]
 
 @export var humor_type_table: Array[Array] = [
-	["Anti-Humor",11],
-	["Surreal Humor",11],
-	["Sarcasm",11],
-	["Slapstick",11],
-	["Deadpan",11],
-	["Observational",11],
-	["Meta Humor",11],
-	["Dark comedy",11],
-	["Insults",11],
-	["None",1]
+	[general_functions.humor_types.DEADPAN_HUMOR, "Deadpan",11], 
+	[general_functions.humor_types.ANTI_HUMOR, "Anti-Humor",11],
+	[general_functions.humor_types.SURREAL_HUMOR, "Surreal Humor",11],
+	[general_functions.humor_types.SARCASM, "Sarcasm",11],
+	[general_functions.humor_types.SLAPSTICK_HUMOR, "Slapstick",11],
+	[general_functions.humor_types.OBSERVATIONAL_HUMOR, "Observational",11],
+	[general_functions.humor_types.META_HUMOR, "Meta Humor",11],
+	[general_functions.humor_types.DARK_HUMOR, "Dark comedy",11],
+	[general_functions.humor_types.INSULT_HUMOR, "Insults",11],
+	[-1, "None",1]
 ]
 
 @export var base_person : Array[PackedScene]
@@ -93,36 +93,38 @@ func _ready() -> void:
 			for do_more in likes_per_person:
 				r_num = randi_range(1,100)
 				for b in humor_type_table:
-					r_num -= b[1]
+					r_num -= b[2]
 					if r_num <= 0:
 						var is_already_picked = false
 						for p in new_person.positives:
-							if b[0] == p:
+							if b[1] == p:
 								is_already_picked = true
 								print("found duplicate pos")
-						if not is_already_picked and b[0] != "None":
-							new_person.positives.append(b[0])
+						if not is_already_picked and b[1] != "None":
+							#new_person.positives.append(b[1])
+							new_person.pos_enums.append(b[0])
 						break
 			##Determine penalties
 			for do_more in dislikes_per_person:
 				r_num = randi_range(1,100)
 				for b in humor_type_table:
-					r_num -= b[1]
+					r_num -= b[2]
 					if r_num <= 0:
 						var is_already_picked = false
 						for n in new_person.negatives:
-							if b[0] == n:
+							if b[1] == n:
 								is_already_picked = true
 								print("found duplicate negative")
 								
 						var array_pos = 0
 						for p in new_person.positives:
-							if b[0] == p:
+							if b[1] == p:
 								is_already_picked = true
 								new_person.positives.remove_at(array_pos)
 							array_pos += 1
-						if not is_already_picked and b[0] != "None":
-							new_person.negatives.append(b[0])
+						if not is_already_picked and b[1] != "None":
+							#new_person.negatives.append(b[1])
+							new_person.neg_enums.append(b[0])
 						break
 			new_person.position.y = -35
 			new_person.z_index = 3
@@ -130,6 +132,15 @@ func _ready() -> void:
 			seat.add_child(new_person)
 			new_person.update_labels()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func send_data_to_global() -> void:
+	for ej in hand.get_children():
+		print(ej)
+		ej.reparent(GlobalData.get_child(1))
+		ej.global_position.x = 0
+		ej.position.y = 0
+		ej.offset_left = 0
+		ej.offset_right = 0
+		ej.offset_top = 0
+		ej.offset_bottom = 0
+	#print("data is in global")

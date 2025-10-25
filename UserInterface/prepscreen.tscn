@@ -23,9 +23,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 
 [node name="Select Venue" type="Panel" parent="TabContainer"]
+visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Pick a place to go enertain at"
@@ -209,7 +210,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Writer\'s Room" type="Panel" parent="TabContainer"]
-visible = false
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 tooltip_text = "Buy cue cards and abilities"
@@ -254,9 +254,19 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Buy1Joke" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer"]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/PanelContainer"]
+layout_mode = 2
+
+[node name="Buy1Joke" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "Get 1 Random Joke"
+icon = ExtResource("5_rlflf")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="BuySet2" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Buy set 2"
 icon = ExtResource("5_rlflf")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -266,4 +276,5 @@ vertical_icon_alignment = 0
 [connection signal="pressed" from="TabContainer/Select Venue/MinEquipAlert/HBoxContainer/ManageButton" to="." method="_on_manage_button_pressed"]
 [connection signal="pressed" from="TabContainer/Select Venue/MinEquipAlert/HBoxContainer/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="pressed" from="TabContainer/Writer\'s Room/BeginnerPanel/Label/StarterButton" to="." method="_on_starter_button_pressed"]
-[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/Buy1Joke" to="." method="_on_buy_1_joke_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/GridContainer/Buy1Joke" to="." method="_on_buy_1_joke_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/GridContainer/BuySet2" to="." method="_on_buy_set_2_pressed"]

@@ -16,6 +16,7 @@ offset_bottom = 40.0
 layout_mode = 0
 filename = "OldJoke0"
 visible_text = "How do you want your hair cut?"
+data = Array[int]([0])
 
 [node name="Card01" parent="StarterPack" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
@@ -36,6 +37,7 @@ visible_text = "Blind & Old"
 layout_mode = 0
 filename = "OldJoke4"
 visible_text = "Oldest Joke"
+data = Array[int]([6])
 
 [node name="Set1" type="Control" parent="."]
 anchors_preset = 0
@@ -87,12 +89,24 @@ layout_mode = 0
 filename = "Why are furries neon"
 visible_text = "Neon furries"
 
+[node name="Card10" parent="Set1" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "KittyWolf1"
+visible_text = "Clever Cow"
+
 [node name="Set2" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Card1" parent="Set2" instance=ExtResource("1_xgu8m")]
+[node name="Card2" parent="Set2" instance=ExtResource("1_xgu8m")]
 layout_mode = 0
-filename = "KittyWolf1"
-visible_text = "Clever Cow"
+filename = "Deadpan Debug Joke"
+visible_text = "Deadpan Debug"
+data = Array[int]([0])
+
+[node name="Card3" parent="Set2" instance=ExtResource("1_xgu8m")]
+layout_mode = 0
+filename = "Dark Humor Debug Joke"
+visible_text = "Dark Humor Debug"
+data = Array[int]([7])

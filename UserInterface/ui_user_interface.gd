@@ -14,3 +14,8 @@ func _on_next_line_pressed() -> void:
 
 func next_visible(my_visible: bool = true) -> void:
 	next_line.visible = my_visible
+
+
+func _on_leave_button_pressed() -> void:
+	get_parent().send_data_to_global()
+	get_tree().change_scene_to_file("res://UserInterface/prepscreen.tscn")

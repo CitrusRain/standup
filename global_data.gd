@@ -4,7 +4,7 @@ var new_player = true
 var selected_card_in_menu : Card
 
 
-func cache_new_card(new_card: Card, in_hand: bool = false) -> void:
+func cache_new_card(new_card: Card, in_hand: bool = false) -> void: ##Adds card to Equipped or Inventory
 	var copied_card = copy_card(new_card)
 	if in_hand:
 		#$Inventory.add_child(copied_card)
@@ -23,7 +23,8 @@ func copy_card(original: Card) -> Card:
 	if(original):
 		var new_card = original.duplicate()
 		new_card.dialogue = original.dialogue
-		new_card.batman = original.batman
+		if(original.batman):
+			new_card.batman = original.batman
 		new_card.visible_text = original.visible_text
 		new_card.filename = original.filename
 		new_card.uses = original.uses

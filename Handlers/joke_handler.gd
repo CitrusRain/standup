@@ -31,7 +31,7 @@ func show_next_line(reading_card: Card = joke_node) -> void:
 		if idk.get("speaker") == null:
 			speechbox.set_text(idk.get("text"))
 		elif idk.get("speaker") == "Punchline":
-			emit_signal("punchline")
+			emit_signal("punchline", joke_node.data)
 			speechbox.set_text(idk.get("text"))
 		elif idk.get("speaker") == "Self-Destruct":
 			joke_node.delete_self()

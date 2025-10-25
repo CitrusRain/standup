@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://bjx47ngv3u4fi"
+path="res://.godot/imported/Dark Humor Debug Joke.clyde-ff43042ad04c97a21c9812ef4006592c.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Dark Humor Debug Joke.clyde"
+dest_files=["res://.godot/imported/Dark Humor Debug Joke.clyde-ff43042ad04c97a21c9812ef4006592c.res"]
+
+[params]
+

@@ -7,6 +7,8 @@ var age_group : String
 
 var positives : Array[String]
 var negatives : Array[String]
+var pos_enums : Array[general_functions.humor_types]
+var neg_enums : Array[general_functions.humor_types]
 
 @onready var personality_info: Panel = $PersonalityInfo
 
@@ -33,10 +35,24 @@ func _process(_delta: float) -> void:
 	personality_info.global_position.y = get_global_mouse_position().y + 10
 	
 
-func laugh() -> void:
-	$LaughterParticle.emitting = true
-	laugh_timeout.wait_time = randf_range(0.5, 3.0)
-	laugh_timeout.start()
+func laugh(args: Array) -> void:
+	var bonus = 1.0
+	for multiplier in args:
+		print("checking: " , multiplier)
+		for pos in pos_enums:
+			if pos == multiplier:
+				print("matching postive")
+				bonus += 50
+		for neg in neg_enums:
+			if neg == multiplier:
+				bonus *= randf_range(-5.0, 1.0)
+				bonus = max(bonus, 0)
+	var laugh_time = randf_range(0.5 * bonus, 3.0 * bonus)
+	print("Bonus = ", bonus, " XD = ", laugh_time)
+	if laugh_time >= 0.5:
+		laugh_timeout.wait_time = laugh_time
+		$LaughterParticle.emitting = true
+		laugh_timeout.start()
 
 
 func _on_laugh_timeout_timeout() -> void:
@@ -55,14 +71,14 @@ func update_labels() -> void:
 	lbl_asl.text = str(age_group , ", ", gender)
 	lbl_profession.text = str(career)
 	var not_first = false
-	for p in positives:
+	for p in pos_enums:
 		if not_first:
 			lbl_positive.text += ", "
-		lbl_positive.text += p
+		lbl_positive.text += general_functions.humor_type_strings[p]
 		not_first = true
 	not_first = false
-	for n in negatives:
+	for n in neg_enums:
 		if not_first:
 			lbl_negative.text += ", "
-		lbl_negative.text += n
+		lbl_negative.text += general_functions.humor_type_strings[n]
 		not_first = true

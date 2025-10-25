@@ -20,8 +20,7 @@ func _ready() -> void:
 		$"TabContainer/Writer's Room/PanelContainer".visible = false
 	reload_cards()
 
-func reload_cards() -> void:
-	##Load the inventory and equipment panels
+func reload_cards() -> void: ##Load the inventory and equipment panels
 	var jokes_arr =  GlobalData.get_inventory()
 	for j in jokes_arr:
 		var frame = card_frame.instantiate()
@@ -33,10 +32,14 @@ func reload_cards() -> void:
 		#GlobalData.cache_new_card(j) # Keeping this 
 	jokes_arr =  GlobalData.get_equipped()
 	for j in jokes_arr:
-		var local_copy = GlobalData.copy_card(j)
+		#var local_copy = GlobalData.copy_card(j)
 		var frame = card_frame.instantiate()
-		local_copy.reparent(frame)
+		j.reparent(frame)
+		#TODO: figure out how to not hardcode these values!, I have no idea why this is the correct way to have things aligned right!!!
+		j.position.x = frame.global_position.x + 60
+		j.position.y = 40
 		joke_inventory.add_child(frame)
+
 
 func _on_venue_button_pressed() -> void:
 	send_data_to_global()
@@ -58,10 +61,11 @@ func _on_starter_button_pressed() -> void:
 	GlobalData.cache_new_card(Catalog.get_node("StarterPack/Card04"))
 	reload_cards()
 	tab_manage_routine.visible = true
-	for i in joke_inventory.get_children():
+	for i in joke_inventory.get_children(): ## Forces all cards in inventory to be equipped
 		i.reparent(equipped)
 	$"TabContainer/Writer's Room/BeginnerPanel".visible = false
 	$"TabContainer/Writer's Room/PanelContainer".visible = true
+	GlobalData.new_player = false
 	pass # Replace with function body.
 
 
@@ -94,3 +98,15 @@ func _on_manage_button_pressed() -> void:
 
 func _on_shop_button_pressed() -> void:
 	tab_container.current_tab = tab_names.SHOP
+
+
+func _on_buy_set_2_pressed() -> void:
+	var cardset = Catalog.get_child(2)
+	if cardset.visible == false:
+		print("set not availible")
+		return
+	for card_to_add in cardset.get_children():
+		GlobalData.cache_new_card(card_to_add)
+	reload_cards()
+	tab_manage_routine.visible = true
+	pass # Replace with function body.

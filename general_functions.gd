@@ -1,6 +1,31 @@
 extends Node
 class_name general_functions
 
+enum  humor_types { 
+					DEADPAN_HUMOR, 
+					ANTI_HUMOR,
+					SURREAL_HUMOR,
+					SARCASM,
+					SLAPSTICK_HUMOR,
+					OBSERVATIONAL_HUMOR,
+					META_HUMOR,
+					DARK_HUMOR,
+					INSULT_HUMOR,
+					NULL
+					}
+
+const humor_type_strings := [ "DEADPAN_HUMOR", 
+					"ANTI_HUMOR",
+					"SURREAL_HUMOR",
+					"SARCASM",
+					"SLAPSTICK_HUMOR",
+					"OBSERVATIONAL_HUMOR",
+					"META_HUMOR",
+					"DARK_HUMOR",
+					"INSULT_HUMOR",
+					""]
+
+
 static func get_grandparent(n) -> Node:
 	return n.get_parent().get_parent()
 	

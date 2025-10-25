@@ -8,6 +8,9 @@ class_name Card
 @export var filename : String
 @export var visible_text : String
 
+@export var data : Array[general_functions.humor_types]
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -44,6 +47,7 @@ func _on_paper_pressed() -> void:
 				if idk.get("speaker") == null:
 					joketext = str( joketext , "\n", idk.get("text"))
 				elif idk.get("speaker") == "Punchline":
+					
 					readme.find_child("Punchline").text = idk.get("text")
 				else:
 					print( idk.get("speaker") )

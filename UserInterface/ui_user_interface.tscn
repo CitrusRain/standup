@@ -45,4 +45,11 @@ offset_right = 1875.0
 offset_bottom = 1007.0
 text = "Next Line"
 
+[node name="LeaveButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 329.0
+offset_bottom = 135.0
+text = "Exit Stage Left"
+
 [connection signal="pressed" from="NextLine" to="." method="_on_next_line_pressed"]
+[connection signal="pressed" from="LeaveButton" to="." method="_on_leave_button_pressed"]

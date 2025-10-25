@@ -1,0 +1,14 @@
+[remap]
+
+importer="clyde.dialogue"
+type="ClydeDialogueFile"
+uid="uid://co0gcnjhnw0at"
+path="res://.godot/imported/Deadpan Debug Joke.clyde-36f391e66f7a93856e1705133390f70c.res"
+
+[deps]
+
+source_file="res://DialogueSystem/Jokes/Deadpan Debug Joke.clyde"
+dest_files=["res://.godot/imported/Deadpan Debug Joke.clyde-36f391e66f7a93856e1705133390f70c.res"]
+
+[params]
+
