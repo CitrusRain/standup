@@ -109,4 +109,4 @@ data = Array[int]([0])
 layout_mode = 0
 filename = "Dark Humor Debug Joke"
 visible_text = "Dark Humor Debug"
-data = Array[int]([7])
+data = Array[int]([7, 4])

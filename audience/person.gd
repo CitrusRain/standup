@@ -39,14 +39,15 @@ func laugh(args: Array) -> void:
 	var bonus = 1.0
 	for multiplier in args:
 		print("checking: " , multiplier)
-		for pos in pos_enums:
-			if pos == multiplier:
-				print("matching postive")
-				bonus += 50
-		for neg in neg_enums:
-			if neg == multiplier:
-				bonus *= randf_range(-5.0, 1.0)
-				bonus = max(bonus, 0)
+		if bonus != 0.0:
+			for pos in pos_enums:
+				if pos == multiplier:
+					print("matching postive")
+					bonus += 50
+			for neg in neg_enums:
+				if neg == multiplier:
+					bonus *= randf_range(-5.0, 1.0)
+					bonus = max(bonus, 0)
 	var laugh_time = randf_range(0.5 * bonus, 3.0 * bonus)
 	print("Bonus = ", bonus, " XD = ", laugh_time)
 	if laugh_time >= 0.5:

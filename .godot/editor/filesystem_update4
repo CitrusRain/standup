@@ -6,3 +6,5 @@ res://audience/person.gd
 res://general_functions.gd
 res://venues/live_stage.gd
 res://audience/person.tscn
+res://venues/main_venue.tscn
+res://audience/laughter_particle.tscn

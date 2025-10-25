@@ -27,17 +27,17 @@ extends Node2D
 ]
 
 @export var humor_type_table: Array[Array] = [
-	[general_functions.humor_types.DEADPAN_HUMOR, "Deadpan",11], 
-	[general_functions.humor_types.ANTI_HUMOR, "Anti-Humor",11],
-	[general_functions.humor_types.SURREAL_HUMOR, "Surreal Humor",11],
-	[general_functions.humor_types.SARCASM, "Sarcasm",11],
-	[general_functions.humor_types.SLAPSTICK_HUMOR, "Slapstick",11],
-	[general_functions.humor_types.OBSERVATIONAL_HUMOR, "Observational",11],
-	[general_functions.humor_types.META_HUMOR, "Meta Humor",11],
-	[general_functions.humor_types.DARK_HUMOR, "Dark comedy",11],
-	[general_functions.humor_types.INSULT_HUMOR, "Insults",11],
-	[-1, "None",1]
-]
+	[general_functions.humor_types.DEADPAN_HUMOR, "Deadpan",11,11], 
+	[general_functions.humor_types.ANTI_HUMOR, "Anti-Humor",11,11],
+	[general_functions.humor_types.SURREAL_HUMOR, "Surreal Humor",11,11],
+	[general_functions.humor_types.SARCASM, "Sarcasm",11,11],
+	[general_functions.humor_types.SLAPSTICK_HUMOR, "Slapstick",11,11],
+	[general_functions.humor_types.OBSERVATIONAL_HUMOR, "Observational",11,11],
+	[general_functions.humor_types.META_HUMOR, "Meta Humor",11,6],
+	[general_functions.humor_types.DARK_HUMOR, "Dark comedy",11,22],
+	[general_functions.humor_types.INSULT_HUMOR, "Insults",11,5],
+	[-1, "None",1,1]
+] ## Humor enum, toString, positive chance, negative chance
 
 @export var base_person : Array[PackedScene]
 
@@ -108,7 +108,7 @@ func _ready() -> void:
 			for do_more in dislikes_per_person:
 				r_num = randi_range(1,100)
 				for b in humor_type_table:
-					r_num -= b[2]
+					r_num -= b[3]
 					if r_num <= 0:
 						var is_already_picked = false
 						for n in new_person.negatives:

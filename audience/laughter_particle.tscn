@@ -8,3 +8,4 @@ amount = 3
 texture = ExtResource("1_c5k4c")
 lifetime = 0.5
 gravity = Vector2(0, -705)
+scale_amount_max = 2.0
