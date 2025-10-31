@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ubr0bmahaprr"]
+[gd_scene load_steps=4 format=3 uid="uid://ubr0bmahaprr"]
 
 [ext_resource type="Script" uid="uid://bfsgcudxrdng0" path="res://UserInterface/ui_user_interface.gd" id="1_rrjhh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rrjhh"]
+font_size = 64
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y1cwc"]
+font_size = 64
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="UI_UserInterface" type="Control" groups=["UI"]]
 layout_mode = 3
@@ -50,6 +60,32 @@ layout_mode = 0
 offset_right = 329.0
 offset_bottom = 135.0
 text = "Exit Stage Left"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -634.0
+offset_bottom = 99.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+text = "Score: "
+label_settings = SubResource("LabelSettings_rrjhh")
+horizontal_alignment = 2
+
+[node name="score_lbl" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "0"
+label_settings = SubResource("LabelSettings_y1cwc")
 
 [connection signal="pressed" from="NextLine" to="." method="_on_next_line_pressed"]
 [connection signal="pressed" from="LeaveButton" to="." method="_on_leave_button_pressed"]

@@ -23,6 +23,7 @@ config/icon="uid://dypqax7w4ma6b"
 
 GlobalData="*res://global_data.tscn"
 Catalog="*res://cards/Catalog.tscn"
+NumbersManager="*res://Handlers/numbers_manager.gd"
 
 [dialogue]
 

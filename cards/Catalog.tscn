@@ -32,6 +32,7 @@ visible_text = "Odysseus & Cyclops"
 layout_mode = 0
 filename = "OldJoke3"
 visible_text = "Blind & Old"
+data = Array[int]([8])
 
 [node name="Card04" parent="StarterPack" instance=ExtResource("1_xgu8m")]
 layout_mode = 0

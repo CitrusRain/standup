@@ -4,6 +4,7 @@
 
 [node name="LaughterParticle" type="CPUParticles2D"]
 texture_filter = 3
+emitting = false
 amount = 3
 texture = ExtResource("1_c5k4c")
 lifetime = 0.5

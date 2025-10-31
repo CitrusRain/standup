@@ -6,6 +6,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalData.score_label = $Panel/HBoxContainer/score_lbl
 	pass # Replace with function body.
 
 func _on_next_line_pressed() -> void:

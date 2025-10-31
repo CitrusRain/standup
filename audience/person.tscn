@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://yw5i3fvlybdi"]
+[gd_scene load_steps=6 format=3 uid="uid://yw5i3fvlybdi"]
 
 [ext_resource type="Script" uid="uid://vbigc03gco6j" path="res://audience/person.gd" id="1_ce63i"]
 [ext_resource type="Texture2D" uid="uid://dmmnbrl5nuspy" path="res://assets/person.png" id="1_xqsv5"]
 [ext_resource type="PackedScene" uid="uid://n605nrwmvq1o" path="res://audience/laughter_particle.tscn" id="3_4fu3l"]
+[ext_resource type="AudioStream" uid="uid://coedqydvwx2v2" path="res://assets/Sounds/ha1.mp3" id="4_gwb0o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4fu3l"]
 radius = 31.06445
@@ -15,7 +16,6 @@ texture = ExtResource("1_xqsv5")
 
 [node name="LaughterParticle" parent="." instance=ExtResource("3_4fu3l")]
 position = Vector2(0, -38)
-emitting = false
 
 [node name="LaughTimeout" type="Timer" parent="."]
 one_shot = true
@@ -65,6 +65,10 @@ text = "Finds Negative:"
 
 [node name="lbl_negative" type="Label" parent="PersonalityInfo/VBoxContainer"]
 layout_mode = 2
+
+[node name="LaughSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gwb0o")
+pitch_scale = 4.0
 
 [connection signal="timeout" from="LaughTimeout" to="." method="_on_laugh_timeout_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

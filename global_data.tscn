@@ -24,3 +24,8 @@ offset_bottom = 40.0
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="1SecondTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="1SecondTimer" to="." method="_one_second_timer_timeout"]

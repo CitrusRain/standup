@@ -47,7 +47,7 @@ extends Node2D
 @export var likes_per_person : int = 2
 @export var dislikes_per_person : int = 1
 
-@onready var hand: Node2D = $Hand
+@onready var hand: Control = $Hand
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
