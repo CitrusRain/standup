@@ -7,3 +7,11 @@ res://global_data.tscn
 res://cards/Catalog.tscn
 res://cards/hand.tscn
 res://venues/live_stage.gd
+res://UserInterface/ui_user_interface.tscn
+res://UserInterface/ui_user_interface.gd
+res://venues/main_venue.tscn
+res://cards/Deck.tscn
+res://cards/card.gd
+res://UserInterface/card_frame.tscn
+res://Handlers/joke_handler.gd
+res://UserInterface/prepscreen.gd

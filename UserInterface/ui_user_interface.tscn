@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ubr0bmahaprr"]
+[gd_scene load_steps=6 format=3 uid="uid://ubr0bmahaprr"]
 
 [ext_resource type="Script" uid="uid://bfsgcudxrdng0" path="res://UserInterface/ui_user_interface.gd" id="1_rrjhh"]
+[ext_resource type="PackedScene" uid="uid://bnj2j4qkjx7hg" path="res://UserInterface/card_frame.tscn" id="2_27665"]
+[ext_resource type="Texture2D" uid="uid://pgfl11dcumdo" path="res://assets/oldjokes0.png" id="3_ld03k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rrjhh"]
 font_size = 64
@@ -22,6 +24,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_rrjhh")
+card_frame = ExtResource("2_27665")
 
 [node name="AudienceDialogue" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -45,6 +48,33 @@ text = "0123456789"
 [node name="Holder" type="Control" parent="StageDialogue" groups=["StageSpeechBox"]]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="CardPicker" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -325.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CurrentHand" type="HBoxContainer" parent="CardPicker" groups=["CurrentHand"]]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DrawButtonPanel" type="PanelContainer" parent="CardPicker"]
+layout_mode = 2
+
+[node name="DrawCard" type="Button" parent="CardPicker/DrawButtonPanel"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("3_ld03k")
+flat = true
+icon_alignment = 1
 
 [node name="NextLine" type="Button" parent="."]
 visible = false
@@ -87,5 +117,6 @@ size_flags_horizontal = 8
 text = "0"
 label_settings = SubResource("LabelSettings_y1cwc")
 
+[connection signal="pressed" from="CardPicker/DrawButtonPanel/DrawCard" to="." method="_on_draw_card_pressed"]
 [connection signal="pressed" from="NextLine" to="." method="_on_next_line_pressed"]
 [connection signal="pressed" from="LeaveButton" to="." method="_on_leave_button_pressed"]

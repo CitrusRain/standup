@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dkem517wphvqs"]
 
-[ext_resource type="PackedScene" uid="uid://pr8vmxighkic" path="res://cards/hand.tscn" id="1_6p21l"]
+[ext_resource type="PackedScene" uid="uid://pr8vmxighkic" path="res://cards/Deck.tscn" id="1_6p21l"]
 [ext_resource type="Script" uid="uid://dbhbp5g0mea5s" path="res://venues/live_stage.gd" id="1_f0s5o"]
 [ext_resource type="PackedScene" uid="uid://ubr0bmahaprr" path="res://UserInterface/ui_user_interface.tscn" id="2_f8bm8"]
 [ext_resource type="PackedScene" uid="uid://dwcqttbq5yqvg" path="res://Handlers/joke_handler.tscn" id="3_jwfid"]
@@ -14,7 +14,10 @@ script = ExtResource("1_f0s5o")
 base_person = Array[PackedScene]([ExtResource("8_dtq0q")])
 
 [node name="Hand" parent="." instance=ExtResource("1_6p21l")]
-position = Vector2(1200, 500)
+offset_left = 1200.0
+offset_top = 500.0
+offset_right = 1200.0
+offset_bottom = 500.0
 
 [node name="UI_UserInterface" parent="." instance=ExtResource("2_f8bm8")]
 anchors_preset = 2

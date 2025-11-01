@@ -41,6 +41,16 @@ func show_next_line(reading_card: Card = joke_node) -> void:
 	else:
 		joke_node.uses += 1 ##Finished telling the joke one more time than before
 		print("eof")
+		print("You're going to the shadow realm, Jimbo!")
+		var joke_parent = joke_node.get_parent()
+		joke_node.reparent(GlobalData.get_child(1))
+		joke_node.global_position.x = 0
+		joke_node.position.y = 0
+		joke_node.offset_left = 0
+		joke_node.offset_right = 0
+		joke_node.offset_top = 0
+		joke_node.offset_bottom = 0
+		joke_parent.queue_free()
 	for lines in stage_dialogue_box.get_children():
 		lines.queue_free()
 	stage_dialogue_box.add_child(speechbox)

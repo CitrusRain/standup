@@ -38,7 +38,7 @@ func reload_cards() -> void: ##Load the inventory and equipment panels
 		#TODO: figure out how to not hardcode these values!, I have no idea why this is the correct way to have things aligned right!!!
 		j.position.x = frame.global_position.x + 60
 		j.position.y = 40
-		joke_inventory.add_child(frame)
+		equipped.add_child(frame)
 
 
 func _on_venue_button_pressed() -> void:

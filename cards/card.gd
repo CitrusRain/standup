@@ -16,7 +16,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _on_paper_pressed() -> void:
-	if get_parent().get_name() == "Hand":
+	if general_functions.get_grandparent(self).get_name() == "CurrentHand":
 		if not batman:
 			batman = get_tree().get_first_node_in_group("JokeHandler")
 		batman.joke_file.load_dialogue(str("res://DialogueSystem/Jokes/" , str(filename,".clyde")))
@@ -57,4 +57,4 @@ func _on_paper_pressed() -> void:
 		
 		
 func delete_self() -> void:
-	queue_free()
+	get_parent().queue_free()

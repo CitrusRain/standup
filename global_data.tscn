@@ -20,7 +20,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Equipped" type="Control" parent="."]
+[node name="Equipped" type="Control" parent="." groups=["GlobalEquipped"]]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

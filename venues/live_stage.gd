@@ -49,6 +49,7 @@ extends Node2D
 
 @onready var hand: Control = $Hand
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for j in GlobalData.get_equipped(): ##load hand
@@ -135,6 +136,17 @@ func _ready() -> void:
 
 func send_data_to_global() -> void:
 	for ej in hand.get_children():
+		print(ej)
+		ej.reparent(GlobalData.get_child(1))
+		ej.global_position.x = 0
+		ej.position.y = 0
+		ej.offset_left = 0
+		ej.offset_right = 0
+		ej.offset_top = 0
+		ej.offset_bottom = 0
+	var current_hand = get_tree().get_first_node_in_group("CurrentHand")
+	for e in current_hand.get_children():
+		var ej = e.get_child(0)
 		print(ej)
 		ej.reparent(GlobalData.get_child(1))
 		ej.global_position.x = 0

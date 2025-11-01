@@ -34,6 +34,7 @@ source_folder="res://DialogueSystem/Jokes"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [editor_plugins]
 
@@ -45,3 +46,6 @@ StageSpeechBox="StageDialouge node - should only be 1"
 JokeHandler="Handles advancement of text in jokes"
 UI="User Interface"
 JokeInfoBox=""
+Deck="The cards in inventory that were brought to the show"
+CurrentHand=""
+GlobalEquipped="Global Node that holds cards that are equipped"
