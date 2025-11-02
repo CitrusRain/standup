@@ -50,6 +50,7 @@ func show_next_line(reading_card: Card = joke_node) -> void:
 		joke_node.offset_right = 0
 		joke_node.offset_top = 0
 		joke_node.offset_bottom = 0
+		joke_node.shrink()
 		joke_parent.queue_free()
 	for lines in stage_dialogue_box.get_children():
 		lines.queue_free()

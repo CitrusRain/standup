@@ -15,3 +15,10 @@ res://cards/card.gd
 res://UserInterface/card_frame.tscn
 res://Handlers/joke_handler.gd
 res://UserInterface/prepscreen.gd
+res://cards/card.tscn
+res://UserInterface/prepscreen.tscn
+res://UserInterface/shop_stock.tscn
+res://UserInterface/shop_stock.gd
+res://UserInterface/Shop Buttons/shop_button_increase_hand.gd
+res://UserInterface/Shop Buttons/shop_button_increase_hand.tscn
+res://UserInterface/Shop Buttons/shop_buttons_parent_class.gd

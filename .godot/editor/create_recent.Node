@@ -1,14 +1,14 @@
-Button
-PanelContainer
-Panel
+Label
 HBoxContainer
+VBoxContainer
+Sprite2D
+PanelContainer
+Button
+BoxContainer
+Panel
 Control
 AudioStreamPlayer2D      - Matches the "sound" keyword.
 Timer
 Label      - Matches the "text" keyword.
-VBoxContainer
 GridContainer
-Label
 CollisionShape2D
-StaticBody2D
-Area2D

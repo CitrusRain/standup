@@ -7,6 +7,8 @@ var selected_card_in_menu : Card
 @onready var cash : float = 0.00
 @onready var score_label = Label
 
+@onready var max_hand_size = 2
+
 signal big_laugh_bonus_particle_controler
 
 func _ready() -> void:
@@ -69,3 +71,7 @@ func add_score(new_points: int) -> int:
 func _one_second_timer_timeout() -> void:
 	emit_signal("big_laugh_bonus_particle_controler")
 	pass # Replace with function body.
+
+func convert_points_to_cash() -> void: ## Any logic to earning money goes here
+	var points = float(score_label.text)
+	cash += points / 4

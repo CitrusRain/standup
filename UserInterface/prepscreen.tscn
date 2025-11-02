@@ -249,32 +249,82 @@ icon = ExtResource("3_53j0d")
 icon_alignment = 1
 expand_icon = true
 
-[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Writer\'s Room"]
+[node name="ShopContainer" type="VBoxContainer" parent="TabContainer/Writer\'s Room"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/PanelContainer"]
+[node name="Bank" type="HBoxContainer" parent="TabContainer/Writer\'s Room/ShopContainer"]
 layout_mode = 2
 
-[node name="Buy1Joke" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer/GridContainer"]
+[node name="Label" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/Bank"]
+layout_mode = 2
+text = "$"
+
+[node name="Money" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/Bank" groups=["MoneyLabel"]]
+layout_mode = 2
+
+[node name="SectionContainer" type="HBoxContainer" parent="TabContainer/Writer\'s Room/ShopContainer"]
+layout_mode = 2
+
+[node name="Debug Buttons" type="PanelContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer"]
+layout_mode = 2
+text = "Debug Buttons"
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer"]
+layout_mode = 2
+
+[node name="Buy1Joke" type="Button" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Get 1 Random Joke"
 icon = ExtResource("5_rlflf")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="BuySet2" type="Button" parent="TabContainer/Writer\'s Room/PanelContainer/GridContainer"]
+[node name="BuySet2" type="Button" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Buy set 2"
 icon = ExtResource("5_rlflf")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/VBoxContainer"]
+layout_mode = 2
+text = "Jokes"
+
+[node name="JokesGridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/VBoxContainer"]
+layout_mode = 2
+text = "Skills"
+
+[node name="SkillsGridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="IntelAndLuckContainer" type="VBoxContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/IntelAndLuckContainer"]
+layout_mode = 2
+text = "Intel & Luck"
+
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/IntelAndLuckContainer"]
+layout_mode = 2
+
 [connection signal="tab_selected" from="TabContainer" to="." method="_on_tab_container_tab_selected"]
 [connection signal="pressed" from="TabContainer/Select Venue/Button" to="." method="_on_venue_button_pressed"]
 [connection signal="pressed" from="TabContainer/Select Venue/MinEquipAlert/HBoxContainer/ManageButton" to="." method="_on_manage_button_pressed"]
 [connection signal="pressed" from="TabContainer/Select Venue/MinEquipAlert/HBoxContainer/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="pressed" from="TabContainer/Writer\'s Room/BeginnerPanel/Label/StarterButton" to="." method="_on_starter_button_pressed"]
-[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/GridContainer/Buy1Joke" to="." method="_on_buy_1_joke_pressed"]
-[connection signal="pressed" from="TabContainer/Writer\'s Room/PanelContainer/GridContainer/BuySet2" to="." method="_on_buy_set_2_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer/GridContainer/Buy1Joke" to="." method="_on_buy_1_joke_pressed"]
+[connection signal="pressed" from="TabContainer/Writer\'s Room/ShopContainer/SectionContainer/Debug Buttons/VBoxContainer/GridContainer/BuySet2" to="." method="_on_buy_set_2_pressed"]

@@ -13,16 +13,19 @@ class_name Card
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Paper2.text = visible_text
 	pass # Replace with function body.
 
-func _on_paper_pressed() -> void:
+func _on_paper2_pressed() -> void:
 	if general_functions.get_grandparent(self).get_name() == "CurrentHand":
 		if not batman:
 			batman = get_tree().get_first_node_in_group("JokeHandler")
 		batman.joke_file.load_dialogue(str("res://DialogueSystem/Jokes/" , str(filename,".clyde")))
 		batman.joke_node = self
 		batman.show_next_line(self)
-	elif get_parent().get_parent().get_name() == "GridContainer":
+
+func _on_paper_pressed() -> void:
+	if get_parent().get_parent().get_name() == "GridContainer":
 		if GlobalData.selected_card_in_menu == self: ## If already selected, move card
 			var inv =   $"../../../../../Joke Inventory/VBoxContainer/GridContainer"
 			var equip = $"../../../../../Equipped/VBoxContainer/GridContainer"
@@ -58,3 +61,11 @@ func _on_paper_pressed() -> void:
 		
 func delete_self() -> void:
 	get_parent().queue_free()
+
+func shrink() -> void:
+	$Paper2.visible = false
+	$Paper.visible = true
+
+func grow() -> void:
+	$Paper2.visible = true
+	$Paper.visible = false

@@ -60,6 +60,8 @@ func _ready() -> void:
 		j.offset_right = 0
 		j.offset_top = 0
 		j.offset_bottom = 0
+		j.grow()
+		
 		
 	## Generate crowd
 	var seat_fill_roll = 100.0
@@ -144,6 +146,7 @@ func send_data_to_global() -> void:
 		ej.offset_right = 0
 		ej.offset_top = 0
 		ej.offset_bottom = 0
+		ej.shrink()
 	var current_hand = get_tree().get_first_node_in_group("CurrentHand")
 	for e in current_hand.get_children():
 		var ej = e.get_child(0)
@@ -155,4 +158,6 @@ func send_data_to_global() -> void:
 		ej.offset_right = 0
 		ej.offset_top = 0
 		ej.offset_bottom = 0
+		ej.shrink()
 	#print("data is in global")
+	GlobalData.convert_points_to_cash()

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://mdfx3fn1s0q0"]
+
+[ext_resource type="Script" uid="uid://bhmnnbrlruucx" path="res://UserInterface/Shop Buttons/shop_button_increase_hand.gd" id="1_uvieh"]
+[ext_resource type="Texture2D" uid="uid://dypqax7w4ma6b" path="res://assets/icon.png" id="2_gjsng"]
+[ext_resource type="Texture2D" uid="uid://b658cwqkl5h4l" path="res://assets/SaleTag.png" id="3_cnjcq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pqvp2"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="ShopButton-IncreaseHand" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_uvieh")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+text = "Increase Hand by 1"
+icon = ExtResource("2_gjsng")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(217, 1)
+texture = ExtResource("3_cnjcq")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -17.0
+offset_top = -15.0
+offset_right = 19.0
+offset_bottom = 15.0
+text = "50"
+label_settings = SubResource("LabelSettings_pqvp2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://bnj2j4qkjx7hg"]
+[gd_scene load_steps=3 format=3 uid="uid://bnj2j4qkjx7hg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyer6"]
+
+[sub_resource type="Theme" id="Theme_obh3m"]
+Panel/styles/panel = SubResource("StyleBoxEmpty_kyer6")
 
 [node name="CardFrame" type="Panel"]
 custom_minimum_size = Vector2(119, 86)
+theme = SubResource("Theme_obh3m")

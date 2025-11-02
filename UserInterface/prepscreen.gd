@@ -1,11 +1,16 @@
 extends Control
 @onready var tab_container: TabContainer = $TabContainer
 
+@export var card_frame : PackedScene
+
+## Manage routine stuff
 @onready var tab_manage_routine: Panel = $"TabContainer/Manage Routine"
 @onready var joke_inventory: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Joke Inventory/VBoxContainer/GridContainer"
 @onready var equipped: GridContainer = $"TabContainer/Manage Routine/SplitContainer/Equipped/VBoxContainer/GridContainer"
 
-@export var card_frame : PackedScene
+##Shop stuff
+@onready var skills_grid_container: GridContainer = $"TabContainer/Writer's Room/ShopContainer/SectionContainer/VBoxContainer/SkillsGridContainer"
+
 
 enum  tab_names { 
 					LEVEL , ## Venue select Tab
@@ -17,8 +22,21 @@ enum  tab_names {
 func _ready() -> void:
 	if GlobalData.new_player:
 		$"TabContainer/Writer's Room/BeginnerPanel".visible = true
-		$"TabContainer/Writer's Room/PanelContainer".visible = false
+		$"TabContainer/Writer's Room/ShopContainer".visible = false
 	reload_cards()
+	refresh_shop()
+	refresh_money()
+	var callable = Callable(self, "refresh_money")
+	self.connect("refresh_money",  callable)
+
+func refresh_money() -> void:
+	$"TabContainer/Writer's Room/ShopContainer/Bank/Money".text = str(GlobalData.cash)
+
+func refresh_shop() -> void: ##Refresh items in the shop panel
+	var stockroom = shop_stock.new()
+	var skill_stock = stockroom.get_skill_items(3)
+	for i in skill_stock:
+		skills_grid_container.add_child(i.instantiate())
 
 func reload_cards() -> void: ##Load the inventory and equipment panels
 	var jokes_arr =  GlobalData.get_inventory()
@@ -64,7 +82,7 @@ func _on_starter_button_pressed() -> void:
 	for i in joke_inventory.get_children(): ## Forces all cards in inventory to be equipped
 		i.reparent(equipped)
 	$"TabContainer/Writer's Room/BeginnerPanel".visible = false
-	$"TabContainer/Writer's Room/PanelContainer".visible = true
+	$"TabContainer/Writer's Room/ShopContainer".visible = true
 	GlobalData.new_player = false
 	pass # Replace with function body.
 
